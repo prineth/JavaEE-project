@@ -1,11 +1,11 @@
 <%-- 
-    Document   : home
-    Created on : Nov 6, 2021, 11:35:15 PM
-    Author     : hirun
+    Document   : gallery
+    Created on : Nov 7, 2021, 2:27:56 AM
+    Author     : user
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -81,6 +81,9 @@
         </form>
       </div>
     </nav>
+      
+    <!--NAVBAR - END -->
+      
+    <h1>Gallery</h1>
+      
   </body>
-</html>
-
