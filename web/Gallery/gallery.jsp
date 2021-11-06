@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +34,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hotel Name</a>
+          <a class="navbar-brand" href="../Home/home.jsp">Hotel Name</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,19 +49,19 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="../Home/home.jsp">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link active" href="#">Gallery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../Gallery/gallery.jsp">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Accomadation</a>
+                <a class="nav-link" href="../Accomadation/accomadation.jsp">Accomadation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="../Contact_us/contact_us.jsp">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -85,5 +85,73 @@
     <!--NAVBAR - END -->
       
     <h1>Gallery</h1>
-      
+    
+    <!--Image cards - start -->
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img
+        src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          This is a longer card with supporting text below as a natural lead-in to
+          additional content. This content is a little bit longer.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img
+        src="https://mdbootstrap.com/img/new/standard/city/042.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a short card.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img
+        src="https://mdbootstrap.com/img/new/standard/city/043.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          This is a longer card with supporting text below as a natural lead-in to
+          additional content.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img
+        src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          This is a longer card with supporting text below as a natural lead-in to
+          additional content. This content is a little bit longer.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <!--Image cards - end -->
+    
   </body>
