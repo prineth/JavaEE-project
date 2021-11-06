@@ -1,10 +1,17 @@
 <%-- 
-    Document   : home
-    Created on : Nov 6, 2021, 11:35:15 PM
-    Author     : hirun
+    Document   : accomadation
+    Created on : Nov 7, 2021, 2:33:53 AM
+    Author     : user
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%-- 
+    Document   : gallery
+    Created on : Nov 7, 2021, 2:27:56 AM
+    Author     : user
+--%>
+
+<%--<%@page contentType="text/html" pageEncoding="UTF-8"%>--%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +41,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hotel Name</a>
+          <a class="navbar-brand" href="../Home/home.jsp">Hotel Name</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,19 +56,19 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="../Home/home.jsp">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../Gallery/gallery.jsp">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Accomadation</a>
+            <li class="nav-item active">
+                <a class="nav-link active" href="#">Accomadation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="../Contact_us/contact_us.jsp">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -82,9 +89,9 @@
       </div>
     </nav>
       
-       <!--NAVBAR - END -->
+    <!--NAVBAR - END -->
       
-    <h1>Home</h1>
+    <h1>Accomadation</h1>
       
   </body>
 </html>
