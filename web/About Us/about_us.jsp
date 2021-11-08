@@ -127,7 +127,7 @@
     ></button>
   </div>
    
-  <!-- Inner -->
+  <!-- Innerhhh -->
   <div class="carousel-inner">
     <!-- Single item -->
     <div class="carousel-item active">
