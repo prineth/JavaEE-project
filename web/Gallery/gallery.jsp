@@ -84,74 +84,52 @@
       
     <!--NAVBAR - END -->
       
-    <h1>Gallery</h1>
+  <center><h1>Gallery</h1></center>
     
-    <!--Image cards - start -->
-    
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img
-        src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-      </div>
-    </div>
+   <!-- Gallery -->
+<div class="row">
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+
+    <img
+      src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
   </div>
-  <div class="col">
-    <div class="card h-100">
-      <img
-        src="https://mdbootstrap.com/img/new/standard/city/042.jpg"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a short card.</p>
-      </div>
-    </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+
+    <img
+      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
   </div>
-  <div class="col">
-    <div class="card h-100">
-      <img
-        src="https://mdbootstrap.com/img/new/standard/city/043.jpg"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img
-        src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-      </div>
-    </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+
+    <img
+      src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
   </div>
 </div>
-    
-    <!--Image cards - end -->
+<!-- Gallery -->
     
   </body>
