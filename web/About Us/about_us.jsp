@@ -62,10 +62,10 @@
                 <a class="nav-link" href="../Gallery/gallery.jsp">Gallery</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link active" href="#">Accomadation</a>
+                <a class="nav-link" href="../Contact_us/accomadation.jsp">Accomadation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Contact_us/about_us.jsp">About Us</a>
+              <a class="nav-link active" href="../Contact_us/about_us.jsp">About Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../Contact_us/contact_us.jsp">Contact Us</a>
@@ -91,7 +91,7 @@
       
     <!--NAVBAR - END -->
       
-    <h1>Accomadation</h1>
+    <h1>About Us</h1>
       
   </body>
 </html>
