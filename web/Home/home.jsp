@@ -53,7 +53,7 @@
               <a class="nav-link" href="#">Accomadation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="../About Us/about_us.jsp">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact Us</a>
