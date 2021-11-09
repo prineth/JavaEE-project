@@ -46,5 +46,5 @@
           </span>
         </form>
       </div>
-    </nav>
+</nav>
     <!--NAVBAR - END -->
