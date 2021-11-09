@@ -323,7 +323,7 @@
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Content -->
               <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>Company name
+                <i class="fas fa-gem me-3"></i>Hotel Name
               </h6>
               <p>
                 Here you can use rows and columns to organize your footer
@@ -340,16 +340,19 @@
                 Products
               </h6>
               <p>
-                <a href="#!" class="text-reset">Angular</a>
+                  <a href="../Home/home.jsp" class="text-reset">Home</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">React</a>
+                  <a href="../Gallery/gallery.jsp" class="text-reset">Gallery</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Vue</a>
+                  <a href="../Accomadation/accomadation.jsp" class="text-reset">Accomadation</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Laravel</a>
+                  <a href="../About Us/about_us.jsp" class="text-reset">About Us</a>
+              </p>
+              <p>
+                  <a href="../Contact_us/contact_us.jsp" class="text-reset">Contact Us</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -403,7 +406,7 @@
       >
         © 2021 Copyright:
         <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
+          >Hotelname.com</a
         >
       </div>
       <!-- Copyright -->
