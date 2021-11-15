@@ -29,6 +29,7 @@
     />
     
     <link rel="stylesheet" href="contactus.css">
+
     
     <title>My Hotel</title>
   </head>
@@ -37,49 +38,44 @@
       <%@ include file="../Navbar/navBar.jsp"%>
       
       <div class="container">
-          <div class="frms">
-          <form>
+          <div class="frms" style="padding-top: 100px">
+        <form id="contact-form">
+  <h2>Contact us</h2>
+
+  <!-- Name input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="name" name="name" class="form-control" />
+    <label class="form-label" for="name">Name</label>
+  </div>
+
   <!-- Email input -->
   <div class="form-outline mb-4">
-    <input type="email" id="form1Example1" class="form-control" />
-    <label class="form-label" for="form1Example1">Email address</label>
+    <input type="email" id="email" name="email" class="form-control" />
+    <label class="form-label" for="email">Email address</label>
   </div>
 
-  <!-- Password input -->
+  <!-- Subject input -->
   <div class="form-outline mb-4">
-    <input type="password" id="form1Example2" class="form-control" />
-    <label class="form-label" for="form1Example2">Password</label>
-  </div>
-  
-   <div class="form-outline mb-4">
-    <input type="password" id="form1Example2" class="form-control" />
-    <label class="form-label" for="form1Example2">Password</label>
+    <input type="text" id="subject" name="subject" class="form-control" />
+    <label class="form-label" for="subject">Subject</label>
   </div>
 
-  <!-- 2 column grid layout for inline styling -->
-  <div class="row mb-4">
-    <div class="col d-flex justify-content-center">
-      <!-- Checkbox -->
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          value=""
-          id="form1Example3"
-          checked
-        />
-        <label class="form-check-label" for="form1Example3"> Remember me </label>
-      </div>
-    </div>
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+    <label class="form-label" for="message">Message</label>
+  </div>
 
-    <div class="col">
-      <!-- Simple link -->
-      <a href="#!">Forgot password?</a>
-    </div>
+  <!-- Mail copy -->
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="mailCopy" id="mailCopy" value="1">
+    <label for="mailCopy" class="form-check-label">Send me copy</label>
   </div>
 
   <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+  <button id="submit-form" type="submit" class="btn btn-primary btn-block mb-4">
+    Send
+  </button>
 </form>
               </div>
       </div>
