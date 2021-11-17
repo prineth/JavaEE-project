@@ -37,7 +37,7 @@
               <a class="dropdown-item" href="../Accomadation/accomadation.jsp">Action</a>
           </li>
           <li>
-            <a class="dropdown-item" href="./roomsAvaialable.jsp">Availability</a>
+            <a class="dropdown-item" href="../roomsAvaialable.jsp">Availability</a>
           </li>
           <li>
             <a class="dropdown-item" href="#">Something else here</a>
