@@ -1,38 +1,4 @@
-<%-- 
-    Document   : home
-    Created on : Nov 6, 2021, 11:35:15 PM
-    Author     : hirun
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
-      rel="stylesheet"
-    />
-
-    <title>My Hotel</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Hotel Name</a>
         <button
@@ -49,19 +15,40 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="../index.jsp">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../Gallery/gallery.jsp">Gallery</a>
             </li>
+            <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Accomadation
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+              <a class="dropdown-item" href="../Accomadation/accomadation.jsp">Action</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another action</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Accomadation</a>
+              <a class="nav-link" href="../About Us/about_us.jsp">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="../Contact_us/contact_us.jsp">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -80,12 +67,5 @@
           </span>
         </form>
       </div>
-    </nav>
-      
-       <!--NAVBAR - END -->
-      
-    <h1>Home</h1>
-      
-  </body>
-</html>
-
+</nav>
+    <!--NAVBAR - END -->
