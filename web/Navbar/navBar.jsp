@@ -20,9 +20,30 @@
             <li class="nav-item">
                 <a class="nav-link" href="../Gallery/gallery.jsp">Gallery</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Accomadation/accomadation.jsp">Accomadation</a>
-            </li>
+            <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Accomadation
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+              <a class="dropdown-item" href="../Accomadation/accomadation.jsp">Action</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another action</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </li>
             <li class="nav-item">
               <a class="nav-link" href="../About Us/about_us.jsp">About Us</a>
             </li>
