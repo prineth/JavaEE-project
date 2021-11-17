@@ -24,7 +24,7 @@
       <li class="nav-item dropdown">
         <a
           class="nav-link dropdown-toggle"
-          href="#"
+          href="../Accomadation/accomadation.jsp"
           id="navbarDropdownMenuLink"
           role="button"
           data-mdb-toggle="dropdown"
