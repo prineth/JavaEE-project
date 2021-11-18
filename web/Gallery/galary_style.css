@@ -4,10 +4,11 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Nov 16, 2021, 1:45:27 PM
-    Author     : hirun
+    Created on : Nov 17, 2021, 7:54:59 PM
+    Author     : user
 */
-.frmclass{
-    padding-top: 50px !important;
-}
 
+*{
+    margin: 0px;
+    padding: 0px;
+}

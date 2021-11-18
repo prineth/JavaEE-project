@@ -24,7 +24,7 @@
       <li class="nav-item dropdown">
         <a
           class="nav-link dropdown-toggle"
-          href="#"
+          href="../Accomadation/accomadation.jsp"
           id="navbarDropdownMenuLink"
           role="button"
           data-mdb-toggle="dropdown"
@@ -37,7 +37,7 @@
               <a class="dropdown-item" href="../Accomadation/accomadation.jsp">Action</a>
           </li>
           <li>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="../roomsAvaialable.jsp">Availability</a>
           </li>
           <li>
             <a class="dropdown-item" href="#">Something else here</a>
