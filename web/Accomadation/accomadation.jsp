@@ -87,7 +87,7 @@
                 content.</p>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
               
-              <center><a href="../Room-Booking/room_booking.jsp"><button type="button" class="button btnseemo" id="myButton" onclick="newly();">Book</button></a> </center>
+              <center><button type="button" class="button btnseemo" id="myButton" onclick="newly();">Book</button></a </center>
 
          </div>
   
