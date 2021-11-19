@@ -23,35 +23,34 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
       rel="stylesheet"
     />
-
-    <title>My Hotel</title>
+    <link rel="stylesheet" href="index_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Golden Reach</title>
   </head>
   <body>
     
       <%@ include file="Navbar/navBar.jsp"%>
 
     <!-- Background image -->
-    <div id="intro" class="bg-image vh-100 shadow-1-strong">
-      <video
-        style="min-width: 100%; min-height: 100%;"
-        playsinline
-        autoplay
-        muted
-        loop
-      >
-        <source
-          class="h-100"
-          src="https://mdbootstrap.com/img/video/Lines.mp4"
-          type="video/mp4"
-        />
-      </video>
+    <div
+  class="bg-image d-flex justify-content-center align-items-center"
+  style="
+    background-image: url('Assets/image/home/home-img.png');
+    height: 100vh;
+  "
+>
+
+
+      
       <div
         class="mask"
         style="
         background: linear-gradient(
           45deg,
-          rgba(29, 236, 197, 0.7),
-          rgba(91, 14, 214, 0.7) 100%
+          rgba(44, 44, 22, 0.7),
+          rgba(102, 89, 14, 0.7) 100%
         );
       "
       >
@@ -62,26 +61,27 @@
             <h1 class="mb-3">Best hotel in Sri Lanka</h1>
             <h5 class="mb-4">Visit our Site for more details</h5>
             <a
-              class="btn btn-outline-light btn-lg m-2"
+              class="btn btn-primary btn-lg m-2" 
+              style="background-color: #B69101;"
               href="#"
               role="button"
               rel="nofollow"
-              <!--target="_blank"
-              --
+              target="_blank"
+              
             >
-              Booking</a
+              Book Now</a
             >
-            <a
+<!--            <a
               class="btn btn-outline-light btn-lg m-2"
               href="#"
               target="_blank"
               role="button"
               >About</a
-            >
+            >-->
           </div>
         </div>
       </div>
-    </div>
+    </div><!--
     <!-- Background image -->
 
     <!--Main layout-->

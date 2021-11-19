@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hotel Name</a>
+        <a class="navbar-brand" href="#" id="hotel_name">Golden Reach</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -12,7 +12,7 @@
         >
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../index.jsp">Home</a>
@@ -32,17 +32,17 @@
         >
           Accomadation
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li>
-              <a class="dropdown-item" href="../Accomadation/accomadation.jsp">Action</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="../roomsAvaialable.jsp">Availability</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                  <a class="dropdown-item" href="../Accomadation/accomadation.jsp">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../roomsAvaialable.jsp">Availability</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
       </li>
             <li class="nav-item">
               <a class="nav-link" href="../About Us/about_us.jsp">About Us</a>
@@ -50,22 +50,20 @@
             <li class="nav-item">
                 <a class="nav-link" href="../Contact_us/contact_us.jsp">Contact Us</a>
             </li>
+            
           </ul>
         </div>
+          <ul class="navbar-nav ">
+              <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up/Login</a>
+          </li>
+          </ul>
+            
+            
+            
+        
+        
       </div>
-      <div class="d-flex align-items-center">
-        <form class="d-flex input-group w-auto">
-          <input
-            type="search"
-            class="form-control rounded"
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="search-addon"
-          />
-          <span class="input-group-text border-0" id="search-addon">
-            <i class="fas fa-search"></i>
-          </span>
-        </form>
-      </div>
+  
 </nav>
     <!--NAVBAR - END -->

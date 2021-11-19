@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2021, 11:54:09 AM
+    Author     : user
+*/
+
+body{
+    font-family: IBM Plex Serif;
+}
+
+/* 1.NavBar */
+/* 2.NavBar */
+/* 3.NavBar */
+/* 4.NavBar */
+/* 5.NavBar */
+
+
+/*nav bar - start*/
+nav{
+    background-color: #B69101;
+}
+#hotel_name{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+}
+/*nav bar - end*/
