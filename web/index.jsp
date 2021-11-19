@@ -63,6 +63,8 @@
             <a
               class="btn btn-primary btn-lg m-2" 
               style="background-color: #B69101;"
+              
+              
               href="#"
               role="button"
               rel="nofollow"
@@ -87,7 +89,41 @@
     <!--Main layout-->
     <main class="mt-5">
       <div class="container">
-        <!--Section: Content-->
+        <!--Section: Content(rooms) start-->
+        <section>
+          <div class="row">
+            <div class="col-md-6 gx-5 mb-4">
+              <div
+                class="bg-image hover-overlay ripple shadow-2-strong"
+                data-mdb-ripple-color="light"
+              >
+                <a>
+                <img
+                    src="Assets/image/home/room.png"
+                  class="img-fluid rounded"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.15);"
+                  ></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 gx-5 mb-4">
+              <h4><strong>Rooms</strong></h4>
+              <p class="text-muted">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it les on purpose (injected humour and the like).
+              </p>
+              
+            </div>
+          </div>
+        </section>
+        <!--Section: Content(rooms) end-->
+        <hr class="my-5" />
+        
+        <!--Section: Content(Venues) start-->
         <section>
           <div class="row">
             <div class="col-md-6 gx-5 mb-4">
@@ -96,7 +132,39 @@
                 data-mdb-ripple-color="light"
               >
                 <img
-                  src="https://mdbootstrap.com/img/new/slides/031.jpg"
+                    src="Assets/image/home/vevnues.png"
+                    class="img-fluid"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.15);"
+                  ></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 gx-5 mb-4">
+              <h4><strong>Venues</strong></h4>
+              <p class="text-muted">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </p>
+              
+            </div>
+          </div>
+        </section>
+        <!--Section: Content(Venues) end-->
+        <hr class="my-5" />
+        <!--Section: Content(Returants & Bar) start-->
+                <section>
+          <div class="row">
+            <div class="col-md-6 gx-5 mb-4">
+              <div
+                class="bg-image hover-overlay ripple shadow-2-strong"
+                data-mdb-ripple-color="light"
+              >
+                <img
+                    src="Assets/image/home/resturents.png"
                   class="img-fluid"
                 />
                 <a href="#!">
@@ -109,24 +177,15 @@
             </div>
 
             <div class="col-md-6 gx-5 mb-4">
-              <h4><strong>Facilis consequatur eligendi</strong></h4>
+              <h4><strong>Restaurants & Bar</strong></h4>
               <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                consequatur eligendi quisquam doloremque vero ex debitis
-                veritatis placeat unde animi laborum sapiente illo possimus,
-                commodi dignissimos obcaecati illum maiores corporis.
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it les on purpose (injected humour and the like).
               </p>
-              <p><strong>Doloremque vero ex debitis veritatis?</strong></p>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                itaque voluptate nesciunt laborum incidunt. Officia, quam
-                consectetur. Earum eligendi aliquam illum alias, unde optio
-                accusantium soluta, iusto molestiae adipisci et?
-              </p>
+              
             </div>
           </div>
         </section>
-        <!--Section: Content-->
+        <!--Section: Content(Returants & Bar) end-->
 
         <hr class="my-5" />
 
@@ -158,7 +217,7 @@
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Button</a>
                 </div>
               </div>
             </div>
@@ -186,7 +245,7 @@
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Button</a>
                 </div>
               </div>
             </div>
@@ -214,7 +273,7 @@
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
+                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Button</a>
                 </div>
               </div>
             </div>
