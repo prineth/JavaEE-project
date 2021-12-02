@@ -3,22 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package controller;
 
+import com.sun.xml.rpc.processor.modeler.j2ee.xml.string;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+import model.dbCon;
 
 /**
  *
- * @author hirun
+ * @author user
  */
-@WebServlet(name = "tesServeletTwo", urlPatterns = {"/tesServeletTwo"})
-public class tesServeletTwo extends HttpServlet {
+public class register extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +38,10 @@ public class tesServeletTwo extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet tesServeletTwo</title>");            
+            out.println("<title>Servlet register</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet tesServeletTwo at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet register at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -69,10 +70,33 @@ public class tesServeletTwo extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+//    ========================================================
+//    =========== Get user input & send to database ==========
+//    ========================================================
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String pass = request.getParameter("pass");
+        
+        try {
+            dbCon con = new dbCon();
+            boolean rslt = con.regUser(name, email, pass);
+            if(rslt==true)
+                out.println("You have successfully registered ✔");
+            else
+                out.println("Your registration failed ❌");
+        } catch (Exception se) {
+            se.printStackTrace();
+        }
+        
+//        processRequest(request, response);
     }
 
     /**
