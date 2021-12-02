@@ -8,17 +8,15 @@ package model;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author hirun
+ * @author user
  */
-@WebServlet(name = "tesServeletTwo", urlPatterns = {"/tesServeletTwo"})
-public class tesServeletTwo extends HttpServlet {
+public class dbCon extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +35,10 @@ public class tesServeletTwo extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet tesServeletTwo</title>");            
+            out.println("<title>Servlet dbCon</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet tesServeletTwo at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet dbCon at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
