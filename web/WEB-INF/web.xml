@@ -12,17 +12,13 @@
         <servlet-name>register</servlet-name>
         <servlet-class>controller.register</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>dbCon</servlet-name>
-        <servlet-class>model.dbCon</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>
-            index.jsp
+            login/login.jsp
         </welcome-file>
     </welcome-file-list>
     <servlet-mapping>
@@ -32,10 +28,6 @@
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>dbCon</servlet-name>
-        <url-pattern>/dbCon</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

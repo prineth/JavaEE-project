@@ -11,7 +11,7 @@
         Email ID:<input type="text" name="email" /><br/>
         Password:<input type="text" name="pass" /><br/>
         <input type="submit" value="login" /><br/>
-        <a href="index.html"> Click here to register </a>
+        <a href="../register/register.jsp"> Click here to register </a>
         </form>
     </body>
 </html>
