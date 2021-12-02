@@ -5,12 +5,15 @@
  */
 package controller;
 
+import com.sun.xml.rpc.processor.modeler.j2ee.xml.string;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+import model.dbCon;
 
 /**
  *
@@ -67,10 +70,33 @@ public class register extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+//    ========================================================
+//    =========== Get user input & send to database ==========
+//    ========================================================
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String pass = request.getParameter("pass");
+        
+        try {
+            dbCon con = new dbCon();
+            boolean rslt = con.regUser(name, email, pass);
+            if(rslt==true)
+                out.println("You have successfully registered ✔");
+            else
+                out.println("Your registration failed ❌");
+        } catch (Exception se) {
+            se.printStackTrace();
+        }
+        
+//        processRequest(request, response);
     }
 
     /**
