@@ -94,7 +94,7 @@
       </div>
 	
           <section class="container">
-        <h3 class="pt-4 pb-2">Bootstrap Datepicker</h3>
+        <h3 class="pt-4 pb-2"></h3>
         <form>
             <div class="row form-group">
                 <label for="date" class="col-sm-1 col-form-label">Date</label>
