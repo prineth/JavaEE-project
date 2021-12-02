@@ -30,7 +30,7 @@
         
         
       </form>
-        
+        <form>
         <!-- Email input -->
         <div class="form-outline mb-4">
           <input type="email" id="form1Example1" class="form-control" />
@@ -67,5 +67,6 @@
       
         <!-- Submit button -->
         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+        </form>
     </body>
 </html>
