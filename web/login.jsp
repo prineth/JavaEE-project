@@ -1,32 +1,9 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login</title>
-        <!-- Font Awesome -->
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-          rel="stylesheet"
-        />
-        <!-- Google Fonts -->
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          rel="stylesheet"
-        />
-        <!-- MDB -->
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
-          rel="stylesheet"
-        /> 
-    </head>
-    <body>
+<%@include file="navBar.jsp" %>
         <form method="post" action="./login">
         Email ID:<input type="text" name="email" /><br/>
         Password:<input type="text" name="pass" /><br/>
         <input type="submit" value="login" /><br/>
-        <a href="../register/register.jsp"> Click here to register </a>
+        <a href="register.jsp"> Click here to register </a>
         
         
       </form>
@@ -68,5 +45,4 @@
         <!-- Submit button -->
         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
         </form>
-    </body>
-</html>
+    <%@ include file="footer.jsp"%>
