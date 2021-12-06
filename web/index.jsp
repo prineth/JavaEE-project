@@ -1,42 +1,6 @@
-<%-- Document : home Created on : Nov 6, 2021, 11:35:15 PM Author : hirun --%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="navBar.jsp" %>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.jsp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
-    <link rel="shortcut icon" type="image" href="Assets/image/logo/logo.png"/>
-    
-    <title>Golden Reach</title>
-  </head>
-  <body>
-    
-      <%@ include file="Navbar/navBar.jsp"%>
-
-    <!-- Background image -->
+<!-- Background image -->
     <div
   class="bg-image d-flex justify-content-center align-items-center"
   style="
@@ -289,7 +253,4 @@
     </main>
     <!--Main layout-->
 
-    <%@ include file="Footer/footer.jsp"%>
-    
-  </body>
-</html>
+    <%@ include file="footer.jsp"%>

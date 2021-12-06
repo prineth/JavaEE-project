@@ -1,4 +1,4 @@
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="text-center text-lg-start bg-dark text-light" >
       <!-- Section: Social media -->
       <section
@@ -132,3 +132,6 @@ Sri Lanka.</p>
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
+
+  </body>
+</html>
