@@ -21,19 +21,20 @@ public class dbCon {
     
     public boolean checkUser(String email,String pass)
     {
-        boolean st = false;
-        try {
-            PreparedStatement ps = createConnection().prepareStatement("select * from student where email=? ans password=?");
-            ps.setString(1, email);
-            ps.setString(2, pass);
-            ResultSet rs = ps.executeQuery();
-            st = rs.next();
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        boolean st =false;
+                  try {
+                      PreparedStatement ps = createConnection().prepareStatement("select * from student where email=? and pass=?");
+                      ps.setString(1, email);
+                      ps.setString(2, pass);
+                      ResultSet rs =ps.executeQuery();
+                      st = rs.next();
+
+                  }
+                    catch(Exception e) {
+                        e.printStackTrace();
+                    }
         
-        return st;
+                     return st;   
     }
     
 //    ========================================================
