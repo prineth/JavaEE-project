@@ -16,7 +16,7 @@ import model.dbCon;
 
 /**
  *
- * @author user
+ * @author Kaneeka
  */
 public class login extends HttpServlet {
 
@@ -72,7 +72,9 @@ public class login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        
+        
+         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 	
         String email = request.getParameter("email");
@@ -100,7 +102,10 @@ public class login extends HttpServlet {
         catch(Exception se) {
             se.printStackTrace();
         }
-//        processRequest(request, response);
+        
+        
+        
+        //processRequest(request, response);
     }
 
     /**
