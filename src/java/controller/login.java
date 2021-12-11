@@ -7,14 +7,16 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.dbCon;
 
 /**
  *
- * @author user
+ * @author Kaneeka
  */
 public class login extends HttpServlet {
 
@@ -70,7 +72,40 @@ public class login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        
+         response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+	
+        String email = request.getParameter("email");
+        String pass = request.getParameter("pass");
+        
+        try {
+               dbCon con=new dbCon();
+               boolean rslt=con.checkUser(email, pass);
+               if(rslt==true)
+               {
+                   out.println("You have successfully logged!!!");
+                  RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
+                   //rs.forward(request, response); // closes the o/p stream after the invoking
+                    rs.include(request, response); // keep the o/p stream opened to pass one value to another page
+               }
+                  else
+                    {
+                        out.println("Username or Password incorrect");
+                        RequestDispatcher rs = request.getRequestDispatcher("login.jsp");
+                        rs.include(request, response); //modify the requested index.html with the included error msg on it.
+
+                    }
+
+           }
+        catch(Exception se) {
+            se.printStackTrace();
+        }
+        
+        
+        
+        //processRequest(request, response);
     }
 
     /**
