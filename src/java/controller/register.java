@@ -13,7 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
-import model.dbCon;
+import javax.servlet.RequestDispatcher;
+import model.addSignData;
+import model.unameCheck;
+
 
 /**
  *
@@ -81,21 +84,40 @@ public class register extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        String name = request.getParameter("name");
+        String fname = request.getParameter("fname");
+         String lname = request.getParameter("lname");
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");
+        int number  =  Integer.parseInt(request.getParameter("phone"));
         
-        try {
-            dbCon con = new dbCon();
-            boolean rslt = con.regUser(name, email, pass);
-            if(rslt==true)
-                out.println("You have successfully registered ✔");
-            else
-                out.println("Your registration failed ❌");
-        } catch (Exception se) {
-            se.printStackTrace();
-        }
         
+        out.println(fname);
+        out.println(lname);
+        out.println(email);
+        out.println(pass);
+ 
+           unameCheck b=new unameCheck();
+           boolean check=b.viewdata(email);
+           
+                     if(check==true)
+       {
+                String msg="username is already taken";
+                
+                out.println(msg);
+                request.setAttribute("messageOne",msg);
+                RequestDispatcher rd = request.getRequestDispatcher("./register.jsp");
+                rd.forward(request, response);
+       }else{
+                   
+                   
+                     addSignData c = new addSignData();
+                     c.addData(fname,lname,email,pass,number);
+                      response.sendRedirect("./login.jsp");
+                   
+               }
+           
+           
+          
 //        processRequest(request, response);
     }
 
