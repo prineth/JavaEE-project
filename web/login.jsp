@@ -13,14 +13,8 @@
            {
                     rd="";
            }
-           
-       
-       
-            
-            
-            
             %>
-        name:<input type="text" name="name" /><br/>
+        Email:<input type="text" name="name" /><br/>
         Password:<input type="password" name="pass" /><br/>
         <input type="submit" value="login" /><br/>
           <p style="color: red;"><%=rd%></p> 
