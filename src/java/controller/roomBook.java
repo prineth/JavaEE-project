@@ -5,24 +5,20 @@
  */
 package controller;
 
-import com.sun.xml.rpc.processor.modeler.j2ee.xml.string;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
-import javax.servlet.RequestDispatcher;
-import model.addSignData;
-import model.unameCheck;
-
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author user
  */
-public class register extends HttpServlet {
+public class roomBook extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +37,10 @@ public class register extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet register</title>");            
+            out.println("<title>Servlet roomBook</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet register at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet roomBook at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -73,52 +69,29 @@ public class register extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
-//    ========================================================
-//    =========== Get user input & send to database ==========
-//    ========================================================
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        
-        String fname = request.getParameter("fname");
-        String lname = request.getParameter("lname");
-        String email = request.getParameter("email");
-        String pass = request.getParameter("pass");
-        int number  =  Integer.parseInt(request.getParameter("phone"));
-        
-        
-        out.println(fname);
-        out.println(lname);
-        out.println(email);
-        out.println(pass);
- 
-           unameCheck b=new unameCheck();
-           boolean check=b.viewdata(email);
-           
-                     if(check==true)
-       {
-                String msg="username is already taken";
-                
-                out.println(msg);
-                request.setAttribute("messageOne",msg);
-                RequestDispatcher rd = request.getRequestDispatcher("./register.jsp");
-                rd.forward(request, response);
-       }else{
-                   
-                   
-                     addSignData c = new addSignData();
-                     c.addData(fname,lname,email,pass,number);
-                      response.sendRedirect("./login.jsp");
-                   
-               }
-           
-           
-          
 //        processRequest(request, response);
+        
+        PrintWriter out = response.getWriter();
+        String Regular = request.getParameter("Regular Room");
+        String Deluxe = request.getParameter("Deluxe Suite");
+        String Executive = request.getParameter("Executive Room");
+        String Wedding = request.getParameter("Wedding Halls");
+        String Ballroom = request.getParameter("Ballroom Halls");
+        String Conference = request.getParameter("Conference Halls");
+        
+        
+        HttpSession session = request.getSession();
+        session.setAttribute("Regular",Regular);
+        session.setAttribute("Deluxe",Deluxe);
+        session.setAttribute("Executive",Executive);
+        session.setAttribute("Wedding",Wedding);
+        session.setAttribute("Ballroom",Ballroom);
+        session.setAttribute("Conference",Conference);
+        
+        response.sendRedirect("./roomsAvaialable.jsp");
     }
 
     /**

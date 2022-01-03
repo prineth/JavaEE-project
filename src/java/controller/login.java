@@ -82,21 +82,14 @@ public class login extends HttpServlet {
 	
         String email = request.getParameter("name");
         String pass = request.getParameter("pass");
-        
-   
-      
+
           unameCheck b=new unameCheck();
           boolean check=b.viewdata(email);
         
           loginData c = new loginData();
           List blist= c.getDatas(email,pass);
           
-         
-            
-       
-           
-            
-            
+
                  if(check==false){
                String msg="username or password incorrect";
                out.println(msg);
