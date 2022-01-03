@@ -44,12 +44,8 @@
                     <p >Arrival Date</p>
 
                                       <div class="input-group date" id="datepicker" >
-                                          <input type="text" class="form-control" style="height: 40px">
-                                          <span class="input-group-append">
-                                              <span class="input-group-text bg-white d-block">
-                                                  <i class="fa fa-calendar" style="height: 21.5px"></i>
-                                              </span>
-                                          </span>
+                                          <input type="date" class="form-control" style="height: 40px">
+                                          
                                       </div>
 
                    </div>
@@ -58,12 +54,8 @@
                     <p >Departure Date</p>
 
                                       <div class="input-group date" id="datepickertwo" >
-                                          <input type="text" class="form-control" style="height: 40px">
-                                          <span class="input-group-append">
-                                              <span class="input-group-text bg-white d-block">
-                                                  <i class="fa fa-calendar" style="height: 21.5px"></i>
-                                              </span>
-                                          </span>
+                                          <input type="date" class="form-control" style="height: 40px">
+                                          
                                       </div>
 
                    </div>
@@ -94,6 +86,8 @@
           
             
         </div>
+        <br>
+        <br>
             
     <%@ include file="footer.jsp"%>
 

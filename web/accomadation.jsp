@@ -42,8 +42,11 @@
                 content.</p>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
               
-              <center><button type="button" class="button btnseemo" id="myButton" onclick="newly();">Book</button></a </center>
-
+              <center>
+                  <form action="roomsAvaialable.jsp">
+                  <button type="submit" class="button btnseemo" id="myButton">Book</button>
+                  </form>
+              </center>                  
          </div>
   
     </div>
@@ -112,7 +115,8 @@
                  content.</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                 <center><button type="button" class="button btnseemo" onclick="newlythree();">Book</button></center>
-  
+                <a href="../index.jsp"><button type="submit">index here</button></a>
+                
             </div>
   
     </div>
