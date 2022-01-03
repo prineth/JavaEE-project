@@ -7,11 +7,52 @@
                    
                     <div class="col-6 col-lg-6 col-md-6" >
                     <p >Room Type</p>
+                    
+                    <%
+                      String Regular= (String)session.getAttribute("Regular");
+                      String Deluxe= (String)session.getAttribute("Deluxe"); 
+                      String Executive= (String)session.getAttribute("Executive");
+                      String Wedding= (String)session.getAttribute("Wedding");
+                      String Ballroom= (String)session.getAttribute("Ballroom"); 
+                      String Conference= (String)session.getAttribute("Conference");
+                      
+                      String Rstr = "";
+                      
+                      if(Regular != null){
+                           Rstr = Regular;
+                      }
+                      
+                      if(Deluxe != null){
+                           Rstr = Deluxe;
+                      }
+                      
+                       if(Executive != null){
+                           Rstr = Executive;
+                      }
+                       
+                      if(Wedding != null){
+                           Rstr = Wedding;
+                      }
+                      
+                      if(Ballroom != null){
+                           Rstr = Ballroom;
+                      }
+                      
+                      if(Conference != null){
+                           Rstr = Conference;
+                      }
+                     
+                    %>
+                    
                     <select class="browser-default custom-select" style="width: 100%;height: 40px">
-                            <option selected>Open this select th Room</option>
-                            <option value="1">Presidential Room</option>
-                            <option value="2">Executive Room</option>
-                            <option value="3">Superior Room</option>
+                            <option selected> <%= Rstr %> </option>
+                            <option value="1">Regular Room</option>
+                            <option value="2">Deluxe Suite</option>
+                            <option value="3">Executive Room</option>
+                            <option value="3">Wedding Halls</option>
+                            <option value="3">Ballroom Halls</option>
+                            <option value="3">Conference Halls</option>
+                            
                         </select>
                    </div>
                  
@@ -44,12 +85,8 @@
                     <p >Arrival Date</p>
 
                                       <div class="input-group date" id="datepicker" >
-                                          <input type="text" class="form-control" style="height: 40px">
-                                          <span class="input-group-append">
-                                              <span class="input-group-text bg-white d-block">
-                                                  <i class="fa fa-calendar" style="height: 21.5px"></i>
-                                              </span>
-                                          </span>
+                                          <input type="date" class="form-control" style="height: 40px">
+                                          
                                       </div>
 
                    </div>
@@ -58,12 +95,8 @@
                     <p >Departure Date</p>
 
                                       <div class="input-group date" id="datepickertwo" >
-                                          <input type="text" class="form-control" style="height: 40px">
-                                          <span class="input-group-append">
-                                              <span class="input-group-text bg-white d-block">
-                                                  <i class="fa fa-calendar" style="height: 21.5px"></i>
-                                              </span>
-                                          </span>
+                                          <input type="date" class="form-control" style="height: 40px">
+                                          
                                       </div>
 
                    </div>
@@ -94,6 +127,8 @@
           
             
         </div>
+        <br>
+        <br>
             
     <%@ include file="footer.jsp"%>
 

@@ -1,3 +1,4 @@
+<%@page import="sun.security.pkcs11.wrapper.Functions"%>
 <%@include file="navBar.jsp" %>
     <!-- Card -->
     </br></br>
@@ -22,14 +23,9 @@
                 
                 >
             </div>
-                    <div class="overlay">
-                        <h2>Come In As Guests. Leave As Family</h2>
-                        <p>Deluxe Room City Facing</p>
-                    </div>
+                    
             </div>
-                        <a href="#!">
-                             <div class="mask rgba-white-slight"></div>
-          </a>
+                        
       
     </div>
       <!--Card content-->
@@ -42,8 +38,12 @@
                 content.</p>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
               
-              <center><button type="button" class="button btnseemo" id="myButton" onclick="newly();">Book</button></a </center>
-
+              <center>
+                  
+                  <form action="roomBook" method="post">
+                      <button type="submit" class="button btnseemo" name="Regular Room" value="Regular Room">Book</button>
+                  </form>
+              </center>                  
          </div>
   
     </div>
@@ -59,14 +59,9 @@
                      <div class="inner" >
                    <img class="card-img-top" src="https://i.ibb.co/rH4NDPJ/steven-ungermann-a-RT5-UCf2-MYY-unsplash.jpg" alt="steven-ungermann-a-RT5-UCf2-MYY-unsplash"
                    alt="Card image cap"></div>
-                        <div class="overlay">
-                             <h2>Come In As Guests. Leave As Family</h2>
-                             <p><a href="#">Link here</a></p>
-                        </div>
+                        
                 </div>
-                   <a href="#!">
-                   <div class="mask rgba-white-slight"></div>
-                   </a>
+                   
             </div>
   
             <!--Card content-->
@@ -77,8 +72,11 @@
                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                    content.</p>
                  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                 <center><button type="button" class="button btnseemo" onclick="newlytwo();">Book</button></center>
-  
+                 <center>
+                  <form action="roomBook" method="post">
+                      <button type="submit" class="button btnseemo" id="btn2" name="Deluxe Suite" value="Deluxe Suite">Book</button>
+                  </form>
+              </center>   
             </div>
   
     </div>
@@ -93,14 +91,9 @@
                 <div class="hovereffect"> <div class="inner" >
                      <img class="card-img-top" src="https://i.ibb.co/rH4NDPJ/steven-ungermann-a-RT5-UCf2-MYY-unsplash.jpg" alt="steven-ungermann-a-RT5-UCf2-MYY-unsplash"
                      alt="Card image cap"></div>
-                                 <div class="overlay">
-                                      <h2>Come In As Guests. Leave As Family</h2>
-                                      <p><a href="#">Link here</a></p>
-                                </div>
+                                 
                 </div>
-                    <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                    </a>
+                   
         </div>
   
             <!--Card content-->
@@ -111,8 +104,13 @@
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                  content.</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <center><button type="button" class="button btnseemo" onclick="newlythree();">Book</button></center>
-  
+                <center>
+                  <form action="roomBook" method="post">
+                      <button type="submit" class="button btnseemo" id="btn3" name="Executive Room" value="Executive Room">Book</button>
+                  </form>
+              </center>   
+                
+                
             </div>
   
     </div>
@@ -125,7 +123,7 @@
   <!-- Card deck -->
 </div>
 </br></br>
-<b><h3 class="text-center mt-4">Meeting Room<br></h3></br>
+<b><h3 class="text-center mt-4">Conference Halls<br></h3></br>
 
 <div class="container-fluid">
 <!-- Card deck -->
@@ -145,27 +143,26 @@
                 
                 >
             </div>
-                    <div class="overlay">
-                        <h2>Come In As Guests. Leave As Family</h2>
-                        <p>Deluxe Room City Facing</p>
-                    </div>
+                    
             </div>
-                        <a href="#!">
-                             <div class="mask rgba-white-slight"></div>
-          </a>
+                        
       
     </div>
       <!--Card content-->
           <div class="card-body">
   
               <!--Title-->
-              <h4 class="card-title text-center">Regular Room</h4>
+              <h4 class="card-title text-center">Wedding Halls</h4>
               <!--Text-->
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
               
-                <center> <button type="button" class="button btnseemo" id="myButton" onclick="newlly();">Book</button></center>
+                <center>
+                  <form action="roomBook" method="post">
+                      <button type="submit" class="button btnseemo" id="btn4" name="Wedding Halls" value="Wedding Halls">Book</button>
+                  </form>
+              </center>   
 </div>
  </div>
 </div>
@@ -179,25 +176,24 @@
                      <div class="inner" >
                    <img class="card-img-top" src="https://i.ibb.co/ZYBGCCB/s-o-c-i-a-l-c-u-t-1-RT4tx-DDAb-M-unsplash.jpg"
                    alt="Card image cap"></div>
-                        <div class="overlay">
-                             <h2>Come In As Guests. Leave As Family</h2>
-                             <p><a href="#">Link here</a></p>
-                        </div>
+                        
                 </div>
-                   <a href="#!">
-                   <div class="mask rgba-white-slight"></div>
-                   </a>
+                   
             </div>
   
             <!--Card content-->
             <div class="card-body">
                  <!--Title-->
-                 <h4 class="card-title text-center">Deluxe Suite</h4>
+                 <h4 class="card-title text-center">Ballroom Halls</h4>
                  <!--Text-->
                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                    content.</p>
                  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                 <center><button type="button" class="button btnseemo" onclick="newlytwo();">Book</button></center>
+                 <center>
+                  <form action="roomBook" method="post">
+                      <button type="submit" class="button btnseemo" id="btn5" name="Ballroom Halls" value="Ballroom Halls">Book</button>
+                  </form>
+              </center>   
           </div>
       </div>
 </div> 
@@ -210,25 +206,24 @@
                 <div class="hovereffect"> <div class="inner" >
                      <img class="card-img-top" src="https://i.ibb.co/ZYBGCCB/s-o-c-i-a-l-c-u-t-1-RT4tx-DDAb-M-unsplash.jpg"
                      alt="Card image cap"></div>
-                                 <div class="overlay">
-                                      <h2>Come In As Guests. Leave As Family</h2>
-                                      <p><a href="#">Link here</a></p>
-                                </div>
+                                 
                 </div>
-                    <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                    </a>
+                   
         </div>
   
             <!--Card content-->
             <div class="card-body">
                 <!--Title-->
-                <h4 class="card-title text-center">Executive Room</h4>
+                <h4 class="card-title text-center">Conference Halls</h4>
                 <!--Text-->
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                  content.</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <center><button type="button" class="button btnseemo" onclick="newlythree();">Book</button></center>
+                <center>
+                  <form action="roomBook" method="post">
+                      <button type="submit" class="button btnseemo" id="btn6" name="Conference Halls" value="Conference Halls">Book</button>
+                  </form>
+              </center>   
   
             </div>
   
