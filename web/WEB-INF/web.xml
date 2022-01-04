@@ -21,8 +21,8 @@
         <servlet-class>controller.roomBook</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>hallBook</servlet-name>
-        <servlet-class>controller.hallBook</servlet-class>
+        <servlet-name>checkAvailability</servlet-name>
+        <servlet-class>controller.checkAvailability</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
@@ -50,8 +50,8 @@
         <url-pattern>/roomBook</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>hallBook</servlet-name>
-        <url-pattern>/hallBook</url-pattern>
+        <servlet-name>checkAvailability</servlet-name>
+        <url-pattern>/checkAvailability</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
