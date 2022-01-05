@@ -1,4 +1,24 @@
 <%@include file="navBar.jsp" %>
+
+<head>
+    <link rel="stylesheet" href="avaiable.css" >
+    <style>
+        .statusBox{
+    width: 600px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 100px;
+    text-align: center;
+}
+.statuspara{
+    margin : 10px 0px 0px 10px;
+}
+
+    </style>
+</head>
+
 <form action="checkAvailability" method="post"> 
         <div class="container">
             <div class="row" >
@@ -29,10 +49,10 @@
                      
                     %>
                     <select name="room_type" class="browser-default custom-select" style="width: 100%;height: 40px">
-                            <option selected> <%= Rstr %> </option>
-                            <option value="Regular Room">Regular Room</option>
-                            <option value="Deluxe Suite">Deluxe Suite</option>
-                            <option value="Executive Room">Executive Room</option>
+                            <option selected value=<%=Rstr%> > <%=Rstr +" Room"%> </option>
+                            <option value="Regular">Regular Room</option>
+                            <option value="Deluxe">Deluxe Suite</option>
+                            <option value="Executive">Executive Room</option>
                             
                         </select>
                    </div>
@@ -110,10 +130,53 @@
         </div>
         
         </form>
-
+                            
+        <%
+        String rd="amma"; 
+        rd = (String)session.getAttribute("status");
+        String color="";
+        String css="";
+        String btn="";
+    //  String rd = (String)request.getAttribute("status");
+      
+        if(rd==null){
+            css="none";
+        }else{
+            css="block";
+        }
+        
+        if("available".equals(rd)){
+            color = "#2a9d8f";
+        }else{
+            color = "#e63946";
+            btn="none";
+        }
+      
+        
+          
+           
+       
+                    %>
+      
+                    <form action="./doneavailable" method="post"  >
+                    <div class="container" style="display:<%=css%>;margin-top:20px; " >
+                        <div class="card" style="background-color:<%=color%>;">
+                                <div class="card-header"></div>
+                                <div class="card-body">
+                                  <h5 class="card-title" style="color:black"><%=rd%></h5>
+                                  <p class="card-text" style="color:black;">
+                                    With supporting text below as a natural lead-in to additional content.
+                                  </p>
+                                  <button class="btn btn-primary" type="submit" style="display:<%=btn%>">Book</button>
+                                </div>
+                              </div>
+                          </div>
+                     </form>
+                    
+                    
         <br>
         <br>
-            
+           
     <%@ include file="footer.jsp"%>
 
 

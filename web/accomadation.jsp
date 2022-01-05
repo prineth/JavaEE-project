@@ -41,7 +41,7 @@
               <center>
                   
                   <form action="roomBook" method="post">
-                      <button type="submit" class="button btnseemo" name="Regular Room" value="Regular Room">Book</button>
+                      <button type="submit" class="button btnseemo" name="Regular Room" value="Regular">Book</button>
                   </form>
               </center>                  
          </div>
@@ -74,7 +74,7 @@
                  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                  <center>
                   <form action="roomBook" method="post">
-                      <button type="submit" class="button btnseemo" id="btn2" name="Deluxe Suite" value="Deluxe Suite">Book</button>
+                      <button type="submit" class="button btnseemo" id="btn2" name="Deluxe Suite" value="Deluxe">Book</button>
                   </form>
               </center>   
             </div>
@@ -106,7 +106,7 @@
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                 <center>
                   <form action="roomBook" method="post">
-                      <button type="submit" class="button btnseemo" id="btn3" name="Executive Room" value="Executive Room">Book</button>
+                      <button type="submit" class="button btnseemo" id="btn3" name="Executive Room" value="Executive">Book</button>
                   </form>
               </center>   
                 

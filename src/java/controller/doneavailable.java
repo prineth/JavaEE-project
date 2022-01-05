@@ -8,20 +8,20 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.addSignData;
-import model.checkAvail;
+import model.doneal;
 
 /**
  *
- * @author user
+ * @author hirun
  */
-public class checkAvailability extends HttpServlet {
+@WebServlet(name = "doneavailable", urlPatterns = {"/doneavailable"})
+public class doneavailable extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +40,10 @@ public class checkAvailability extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet checkAvailability</title>");            
+            out.println("<title>Servlet doneavailable</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet checkAvailability at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet doneavailable at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -75,49 +75,28 @@ public class checkAvailability extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        processRequest(request, response);
-         PrintWriter out = response.getWriter();
-        String roomType = request.getParameter("room_type");
-        String nights = request.getParameter("nights");
-        int rooms = Integer.parseInt(request.getParameter("rooms"));
-        String noOfGuest = request.getParameter("no_of_guests");
-        String ArrivalDate = request.getParameter("arrival_date");
-        String DepatureDate = request.getParameter("departure_date");
         
-       //out.println(roomType);
-       // out.println(nights);
-      //  out.println(rooms);
-      //  out.println(noOfGuest);
-      //  out.println(ArrivalDate);
-       // out.println(DepatureDate);
+     PrintWriter out = response.getWriter();
+          
+     
         
-        
-       
-        
-          checkAvail c = new checkAvail();
-          String check=c.avail(rooms,roomType);
-          
-          HttpSession session = request.getSession();
-          session.setAttribute("rooms",rooms);
-          session.setAttribute("roomType",roomType);
-          
-          out.println(check);
-          
-            //request.setAttribute("status",check);
-           // RequestDispatcher rd = request.getRequestDispatcher("./roomsAvaialable.jsp");
-           // rd.forward(request, response);
-          
-             response.sendRedirect("./roomsAvaialable.jsp");
-           
-       
-        session.setAttribute("status",check);
+         HttpSession session = request.getSession();
+         int room= (int)session.getAttribute("rooms");
+         String roomType= (String)session.getAttribute("roomType"); 
          
-          
-        //  String hello=((String) check.get(0));
-          
+         out.println(room);
+         out.println(roomType);
+        
+         doneal c = new doneal();
+         List blist= c.availdone(room,roomType); 
          
-        
-        
+         
+          String one=((String) blist.get(0));
+          String two = ((String) blist.get(1));
+          
+          out.println(one);
+          out.print(two);
+       
     }
 
     /**

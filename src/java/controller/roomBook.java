@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.addSignData;
 
 /**
  *
@@ -90,6 +91,10 @@ public class roomBook extends HttpServlet {
         session.setAttribute("Wedding",Wedding);
         session.setAttribute("Ballroom",Ballroom);
         session.setAttribute("Conference",Conference);
+        
+        
+    
+        
         
         response.sendRedirect("./roomsAvaialable.jsp");
     }
