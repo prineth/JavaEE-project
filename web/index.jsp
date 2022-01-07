@@ -81,7 +81,7 @@
             <div class="col-md-6 gx-5 mb-4">
               <h4><strong>Rooms</strong></h4>
               <p class="text-muted">
-                It 
+                 Rooms at our hotel are classified into three types. Those are the president, executive and superior. Each of those rooms is luxuriously designed.
               </p>
               
             </div>
