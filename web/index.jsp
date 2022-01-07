@@ -146,7 +146,7 @@
             <div class="col-md-6 gx-5 mb-4">
               <h4><strong>Restaurants & Bar</strong></h4>
               <p class="text-muted">
-                
+                Featuring one of the best bars and restaurants in our area, our hotel offers you wonderful entertainment and a unique dining experience. We offer you all the local and foreign cuisine you need to suit your liking. We guarantee you that our bars and restaurants will provide you with superior service.
               </p>
               
             </div>
