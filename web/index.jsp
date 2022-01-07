@@ -81,7 +81,7 @@
             <div class="col-md-6 gx-5 mb-4">
               <h4><strong>Rooms</strong></h4>
               <p class="text-muted">
-                It 
+                 Rooms at our hotel are classified into three types. Those are the president, executive and superior. Each of those rooms is luxuriously designed. We provided all the facilities related to each type of room. We have provided you with high-quality beds and all the other accessories. We guarantee that you will be able to enjoy your vacation comfortably in our rooms.
               </p>
               
             </div>
