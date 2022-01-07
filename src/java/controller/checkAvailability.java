@@ -78,9 +78,9 @@ public class checkAvailability extends HttpServlet {
 //        processRequest(request, response);
          PrintWriter out = response.getWriter();
         String roomType = request.getParameter("room_type");
-        String nights = request.getParameter("nights");
+        int nights = Integer.parseInt(request.getParameter("nights"));
         int rooms = Integer.parseInt(request.getParameter("rooms"));
-        String noOfGuest = request.getParameter("no_of_guests");
+        int noOfGuest = Integer.parseInt(request.getParameter("no_of_guests"));
         String ArrivalDate = request.getParameter("arrival_date");
         String DepatureDate = request.getParameter("departure_date");
         
@@ -98,16 +98,20 @@ public class checkAvailability extends HttpServlet {
           String check=c.avail(rooms,roomType);
           
           HttpSession session = request.getSession();
-          session.setAttribute("rooms",rooms);
           session.setAttribute("roomType",roomType);
+          session.setAttribute("rooms",rooms);
+          session.setAttribute("nights",nights);
+          session.setAttribute("noOfGuest",noOfGuest);
+          session.setAttribute("ArrivalDate",ArrivalDate);
+          session.setAttribute("DepatureDate",DepatureDate);
           
           out.println(check);
-          
+           response.sendRedirect("./roomsAvaialable.jsp");
             //request.setAttribute("status",check);
            // RequestDispatcher rd = request.getRequestDispatcher("./roomsAvaialable.jsp");
            // rd.forward(request, response);
-          
-             response.sendRedirect("./roomsAvaialable.jsp");
+         
+            
            
        
         session.setAttribute("status",check);

@@ -42,6 +42,7 @@ Statement st;
                
                 booklist.add(rs.getString("email"));
                 booklist.add(rs.getString("password"));   
+                booklist.add(rs.getInt("id"));
             }
                 
             } catch (SQLException ex) {
