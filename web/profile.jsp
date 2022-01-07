@@ -11,9 +11,9 @@
 </head>
 <body>
 
-  
+  <%@include file="navBar.jsp" %>
     
-<h2>Data from the table 'stu_info' of database 'student'</h2>
+
 <%
 try {
 /* Create string of connection url within specified format with machine
@@ -42,24 +42,36 @@ statement = connection.createStatement();
 String QueryString = "SELECT * FROM room_reservation WHERE user_id=5";
 rs = statement.executeQuery(QueryString);
 %>
-<TABLE border="5" style="width: 400px;height: 500px">
-    <tr>
-    <th>res_id</th>
-    <th>res_id</th>
-    <th>res_id</th>
-    <th>res_id</th>
-    
+<div class="container">
+<table class="table">
+<tr>
+      <th scope="col">reservation_id</th>
+      <th scope="col">room_id</th>
+      <th scope="col">room_fee</th>
+      <th scope="col">nights</th>
+     
+      <th scope="col">arrival Date</th>
+      <th scope="col">depature Date</th>
 </tr>
 <%
 while (rs.next()) {
 %>
+<tbody>
+    <tr>
+      <th scope="row"><%=rs.getInt("res_id")%></th>
+      <td><%=rs.getInt("room_id")%></td>
+      <td><%=rs.getFloat("perroom_fee")%></td>
+      <td><%=rs.getInt("nights")%></td>
+     
+      <td><%=rs.getString("arrival_date")%></td>
+      <td><%=rs.getString("depature_date")%></td>
+    </tr>
+  
+ </tbody>
+</div>
 
-<tr>
-<TD><%=rs.getInt("res_id")%></TD>
-<TD><%=rs.getInt("room_id")%></TD>
-<TD><%=rs.getFloat("perroom_fee")%></TD>
-<TD><%=rs.getInt("nights")%></TD>
-</tr>
+
+
 <% } %>
 <%
 // close all the connections.
