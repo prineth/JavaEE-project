@@ -81,7 +81,7 @@
             <div class="col-md-6 gx-5 mb-4">
               <h4><strong>Rooms</strong></h4>
               <p class="text-muted">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it les on purpose (injected humour and the like).
+                 Rooms at our hotel are classified into three types. Those are the president, executive and superior. Each of those rooms is luxuriously designed. We provided all the facilities related to each type of room. We have provided you with high-quality beds and all the other accessories. We guarantee that you will be able to enjoy your vacation comfortably in our rooms.
               </p>
               
             </div>
@@ -114,7 +114,7 @@
             <div class="col-md-6 gx-5 mb-4">
               <h4><strong>Venues</strong></h4>
               <p class="text-muted">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                
               </p>
               
             </div>
