@@ -92,11 +92,18 @@ public class roomBook extends HttpServlet {
         session.setAttribute("Ballroom",Ballroom);
         session.setAttribute("Conference",Conference);
         
+         String user_email = (String)session.getAttribute("email"); 
+           
+           if(user_email == null){
+                response.sendRedirect("./login.jsp");
+           }else{
+               response.sendRedirect("./roomsAvaialable.jsp");
+           }
         
     
         
         
-        response.sendRedirect("./roomsAvaialable.jsp");
+       // response.sendRedirect("./roomsAvaialable.jsp");
     }
 
     /**
