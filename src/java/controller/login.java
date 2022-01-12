@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.loginData;
 import model.unameCheck;
 
@@ -102,9 +103,17 @@ public class login extends HttpServlet {
                    
                    String emailss=((String) blist.get(0));
                    String passw = ((String) blist.get(1));
+                   int id = ((int)blist.get(2));
                  
                     if(pass.equals(passw) && email.equals(emailss)){
-                      RequestDispatcher rd = request.getRequestDispatcher("./index.jsp");
+                         HttpSession session = request.getSession();
+                         session.setAttribute("userid",id);
+                         session.setAttribute("email",emailss);
+                         session.setAttribute("userid",id);
+                         
+                         
+                         
+                      RequestDispatcher rd = request.getRequestDispatcher("./accomadation.jsp");
                       rd.forward(request, response);
                  }else{
                String msg="username or password incorrect";

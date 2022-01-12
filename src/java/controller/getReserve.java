@@ -14,14 +14,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.doneal;
+import model.getresData;
 
 /**
  *
  * @author hirun
  */
-@WebServlet(name = "doneavailable", urlPatterns = {"/doneavailable"})
-public class doneavailable extends HttpServlet {
+@WebServlet(name = "getReserve", urlPatterns = {"/getReserve"})
+public class getReserve extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +40,10 @@ public class doneavailable extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet doneavailable</title>");            
+            out.println("<title>Servlet getReserve</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet doneavailable at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet getReserve at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -76,35 +76,18 @@ public class doneavailable extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-     PrintWriter out = response.getWriter();
-          
-     
+        HttpSession session = request.getSession();
+        int userid= (int)session.getAttribute("userid");
         
-         HttpSession session = request.getSession();
-         int room= (int)session.getAttribute("rooms");
-         String roomType= (String)session.getAttribute("roomType"); 
-         
-         out.println(room);
-         out.println(roomType);
-         
-         int userid= (int)session.getAttribute("userid");
-         int nights = (int)session.getAttribute("nights");
-         int noOfGuest = (int)session.getAttribute("noOfGuest");
-         String ArrivalDate = (String)session.getAttribute("ArrivalDate"); 
-         String DepatureDate = (String)session.getAttribute("DepatureDate"); 
+         getresData c = new getresData ();
+         List blist= c.getDatass(userid);
          
          
-         
-         
-         doneal c = new doneal();
-         c.availdone(room,roomType,userid,nights,noOfGuest,ArrivalDate,DepatureDate); 
-         
-         
-         
-         
-          
-          
-       
+        
+        
+        
+        
+        processRequest(request, response);
     }
 
     /**
