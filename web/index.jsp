@@ -114,7 +114,7 @@
             <div class="col-md-6 gx-5 mb-4">
               <h4><strong>Venues</strong></h4>
               <p class="text-muted">
-                We ranked the our hotel under three hall types. These are the wedding hall, ballroom hall and conference hall. We guarantee that the hall we have will provide a superior service for your weddings, small corporate meetings and all other events. We have a spacious wedding hall and a modern conference hall. We guarantee that we will be able to make your celebrations very beautiful.
+                We ranked our hotel under three hall types. These are the wedding hall, ballroom hall and conference hall. We guarantee that the hall we have will provide a superior service for your weddings, small corporate meetings and all other events. We have a spacious wedding hall and a modern conference hall. We guarantee that we will be able to make your celebrations very beautiful.
               </p>
               
             </div>
