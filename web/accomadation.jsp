@@ -120,7 +120,7 @@
   <!-- Card deck -->
 </div>
 </br></br>
-<b><h3 class="text-center mt-4">Halls<br></h3></br>
+<b><h3 class="text-center mt-4">Conference Halls<br></h3></br>
 
 <div class="container-fluid">
 <!-- Card deck -->
@@ -151,7 +151,8 @@
               <!--Title-->
               <h4 class="card-title text-center">Wedding Halls</h4>
               <!--Text-->
-              <p class="card-text">With and impressive and rich interior it will gives the glamorous look.Attentive staff, reliable service, and great cuisine will make it an impactful event.</p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
               
                 <center>
@@ -182,7 +183,8 @@
                  <!--Title-->
                  <h4 class="card-title text-center">Ballroom Halls</h4>
                  <!--Text-->
-                 <p class="card-text">With an elaborate and rich interior, The Balmoral resembles grand palatial elegance with its spacious setting.the venue is perfect for gala events, dinner dances and grand occasions.</p>
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                   content.</p>
                  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                  <center>
                   <form action="roomBook" method="post">
@@ -211,7 +213,8 @@
                 <!--Title-->
                 <h4 class="card-title text-center">Conference Halls</h4>
                 <!--Text-->
-                <p class="card-text">provide everything from technical assistance to entertainment, so you can leave the planning to us. Our 24-hour butler service will ensure you are feel like royalty at all times.</p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                 content.</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                 <center>
                   <form action="roomBook" method="post">
