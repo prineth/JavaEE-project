@@ -32,10 +32,9 @@
           <div class="card-body">
   
               <!--Title-->
-              <h4 class="card-title text-center">Regular Room</h4>
+              <h4 class="card-title text-center">Executive Room</h4>
               <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <p class="card-text">The Executive Rooms come with a range of exclusive, intuitive services that spell out comfort, convenience & royal treatment.</p>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
               
               <center>
@@ -67,10 +66,9 @@
             <!--Card content-->
             <div class="card-body">
                  <!--Title-->
-                 <h4 class="card-title text-center">Deluxe Suite</h4>
+                 <h4 class="card-title text-center">Superior Room</h4>
                  <!--Text-->
-                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                   content.</p>
+                 <p class="card-text">The Superior Rooms offer wonderfully spacious living spaces equipped with white marble bathrooms & foremost, modern amenities.</p>
                  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                  <center>
                   <form action="roomBook" method="post">
@@ -99,10 +97,9 @@
             <!--Card content-->
             <div class="card-body">
                 <!--Title-->
-                <h4 class="card-title text-center">Executive Room</h4>
+                <h4 class="card-title text-center">Presidential Room</h4>
                 <!--Text-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                 content.</p>
+                <p class="card-text">Luxuriously furnished,extensive living area, provides guests with modern amenities.Our butler service will ensure to feel like royalty.</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                 <center>
                   <form action="roomBook" method="post">
@@ -123,7 +120,7 @@
   <!-- Card deck -->
 </div>
 </br></br>
-<b><h3 class="text-center mt-4">Conference Halls<br></h3></br>
+<b><h3 class="text-center mt-4">Halls<br></h3></br>
 
 <div class="container-fluid">
 <!-- Card deck -->
@@ -154,8 +151,7 @@
               <!--Title-->
               <h4 class="card-title text-center">Wedding Halls</h4>
               <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <p class="card-text">With and impressive and rich interior it will gives the glamorous look.Attentive staff, reliable service, and great cuisine will make it an impactful event.</p>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
               
                 <center>
@@ -186,8 +182,7 @@
                  <!--Title-->
                  <h4 class="card-title text-center">Ballroom Halls</h4>
                  <!--Text-->
-                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                   content.</p>
+                 <p class="card-text">With an elaborate and rich interior, The Balmoral resembles grand palatial elegance with its spacious setting.the venue is perfect for gala events, dinner dances and grand occasions.</p>
                  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                  <center>
                   <form action="roomBook" method="post">
@@ -216,8 +211,7 @@
                 <!--Title-->
                 <h4 class="card-title text-center">Conference Halls</h4>
                 <!--Text-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                 content.</p>
+                <p class="card-text">provide everything from technical assistance to entertainment, so you can leave the planning to us. Our 24-hour butler service will ensure you are feel like royalty at all times.</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                 <center>
                   <form action="roomBook" method="post">
