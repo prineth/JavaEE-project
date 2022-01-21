@@ -4,21 +4,11 @@
             
                        <%
             
-       
-      String rd=(String)request.getAttribute("messageOne");
-           if(rd==null)
+      String msg=(String)request.getAttribute("messageOne");
+           if(msg==null)
            {
-                    rd="";
+                    msg="";
            }
-           
-         String rt=(String)request.getAttribute("messageTwo");
-           if(rt==null)
-           {
-                    rt="";
-           }
-       
-            
-            
             
             %>
             
@@ -36,8 +26,8 @@
        <br>
          <button type="submit" class="btn btn-primary" value="register">Sign Up</button>
         
-         <p style="color: red;"><%=rd%></p> 
-                 <p style="color: red;"> <%=rt%></p>
+         <p style="color: red;"><%=msg%></p> 
+
         </form>
        </div>    
   
