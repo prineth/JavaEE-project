@@ -1,5 +1,6 @@
 <%@include file="navBar.jsp" %>
-        <form method="post" action="./register">
+<div class="container justify-content-center">    
+<form method="post" action="./register">
             
                        <%
             
@@ -21,17 +22,23 @@
             
             %>
             
-            
-        First Name:<input type="text" name="fname" /><br/>
-        Last Name:<input type="text" name="lname" /><br/>
-        Email:<input type="email" name="email" /><br/>
-        Password:<input type="password" name="pass" /><br/>
-        Number:<input type="number" name="phone" /><br/>
-        <input type="submit" value="register" />
+            <p>First Name</p>
+        <input type="text" name="fname" /><br/>
+         <p>Last Name</p>
+        <input type="text" name="lname" /><br/>
+         <p>Email</p>
+        <input type="email" name="email" /><br/>
+         <p>Password</p>
+        <input type="password" name="pass" /><br/>
+        <p> Number</p>
+       <input type="number" name="phone" /><br/>
+        
+       <br>
+         <button type="submit" class="btn btn-primary" value="register">Sign Up</button>
         
          <p style="color: red;"><%=rd%></p> 
                  <p style="color: red;"> <%=rt%></p>
         </form>
-        
+       </div>    
   
     <%@ include file="footer.jsp"%>

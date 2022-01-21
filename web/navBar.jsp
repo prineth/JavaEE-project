@@ -92,6 +92,26 @@
               <li class="nav-item">
                   <a class="nav-link" href="login.jsp">Sign Up/Login</a>
           </li>
+          <% 
+
+          Integer rds = (Integer) session.getAttribute("userid");
+          String csss ;
+          
+        
+          
+
+         if(rds==null){
+            csss="none";
+        }else{
+            csss="block";
+        }
+          
+          %>
+          
+          
+           <li class="nav-item" style="display:<%=csss%>;">
+                  <a class="nav-link" href="profile.jsp">profile</a>
+          </li>
           </ul>
             
             

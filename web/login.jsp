@@ -3,7 +3,7 @@
 
 
 <%@include file="navBar.jsp" %>
-
+  <div class="container justify-content-center">
         <form method="post" action="./login">
                              <%
             
@@ -14,12 +14,17 @@
                     rd="";
            }
             %>
-        Email:<input type="text" name="name" /><br/>
-        Password:<input type="password" name="pass" /><br/>
-        <input type="submit" value="login" /><br/>
+          
+                <p>Email</p>
+      <input type="text" name="name" /><br/>
+      <p>Password</p>
+        <input type="password" name="pass" /><br/>
+        <br/>
+        <p>Click here to <a href="register.jsp">register </a></p> 
+        <button type="submit" class="btn btn-primary" value="login">Log In</button>
           <p style="color: red;"><%=rd%></p> 
-        <a href="register.jsp"> Click here to register </a>
+       
 
       </form>
-       
+       </div>
     <%@ include file="footer.jsp"%>

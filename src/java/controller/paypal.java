@@ -7,22 +7,18 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.doneal;
 
 /**
  *
  * @author hirun
  */
-@WebServlet(name = "doneavailable", urlPatterns = {"/doneavailable"})
-public class doneavailable extends HttpServlet {
+@WebServlet(name = "paypal", urlPatterns = {"/paypal"})
+public class paypal extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +37,10 @@ public class doneavailable extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet doneavailable</title>");            
+            out.println("<title>Servlet paypal</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet doneavailable at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet paypal at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -76,54 +72,7 @@ public class doneavailable extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-     PrintWriter out = response.getWriter();
-          
-     
-        
-         HttpSession session = request.getSession();
-         int room= (int)session.getAttribute("rooms");
-         String roomType= (String)session.getAttribute("roomType"); 
-         
-         out.println(room);
-         out.println(roomType);
-         
-         int userid= (int)session.getAttribute("userid");
-         int nights = (int)session.getAttribute("nights");
-         int noOfGuest = (int)session.getAttribute("noOfGuest");
-         String ArrivalDate = (String)session.getAttribute("ArrivalDate"); 
-         String DepatureDate = (String)session.getAttribute("DepatureDate"); 
-         
-         
-         
-         
-         doneal c = new doneal();
-         c.availdone(room,roomType,userid,nights,noOfGuest,ArrivalDate,DepatureDate); 
-         
-         
-         
-          
-          float roomPrice = 0;
-          
-          if("Regular".equals(roomType)){
-              roomPrice = 10000;
-          }
-           if("Deluxe".equals(roomType)){
-              roomPrice = 20000;
-          }
-            if("Executive".equals(roomType)){
-              roomPrice = 30000;
-          }
-          
-          float fullroomprice = room*roomPrice;
-          
-          request.setAttribute("roomsprice",fullroomprice);
-               RequestDispatcher rd = request.getRequestDispatcher("./payment.jsp");
-               rd.forward(request, response);
-         
-          
-          
-       
+        processRequest(request, response);
     }
 
     /**

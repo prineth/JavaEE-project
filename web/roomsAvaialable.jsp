@@ -164,9 +164,7 @@
                                 <div class="card-header"></div>
                                 <div class="card-body">
                                   <h5 class="card-title" style="color:black"><%=rd%></h5>
-                                  <p class="card-text" style="color:black;">
-                                    With supporting text below as a natural lead-in to additional content.
-                                  </p>
+                                 
                                   <button class="btn btn-primary" type="submit" style="display:<%=btn%>">Book</button>
                                 </div>
                               </div>

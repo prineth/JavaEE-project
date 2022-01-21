@@ -15,7 +15,24 @@
     
 
 <%
+    
+  
+    
 try {
+    //int userid = 5 ;
+   
+   int userid = (Integer) session.getAttribute("userid");
+   String email = (String) session.getAttribute("email");
+   String fname = (String) session.getAttribute("fname");
+   String lname = (String) session.getAttribute("lname");
+   int number = (Integer) session.getAttribute("number");
+   
+   
+   
+   
+   
+  
+   
 /* Create string of connection url within specified format with machine
 name, port number and database name. Here machine name id localhost and 
 database name is student. */
@@ -37,12 +54,110 @@ sending sql statements to the specified database. */
 statement = connection.createStatement();
 
 
+
 //int user_id = (int)session.getAttribute("userid"); 
 // sql query to retrieve values from the secified table.
-String QueryString = "SELECT * FROM room_reservation WHERE user_id=5";
+String QueryString = "SELECT * FROM room_reservation WHERE user_id='"+userid+"'";
 rs = statement.executeQuery(QueryString);
 %>
+
 <div class="container">
+    
+    <h2 class="mt-5">Hi,  <%=fname+" "%><%=lname%>.....</h2>
+    <br><br>
+     <h4>My Details</h4>
+     <br>
+     <div class="row">
+         <div class="col-lg-3">
+         
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+      <h5 style="font-weight: bolder">personal details</h5>
+      <br>
+      <p class="card-text" ><span style="font-weight: bold">name    : </span><span><%=fname+" "%><%=lname%></span></p>
+    <p class="card-text" ><span style="font-weight: bold">Email   : </span><span><%=email%></span></p>
+    <p class="card-text"><span style="font-weight: bold">Contact : </span><span><%=number%></span></p>
+    <br>
+    <a href="#" class="btn btn-primary">Edit</a>
+  </div>
+</div>
+    
+         </div>
+    
+    
+    
+    
+    <div class="col-lg-4">
+         
+    <div class="card" style="width: 25rem;">
+  <div class="card-body">
+      <h5 style="font-weight: bolder">delete reservation</h5>
+      <br>
+      <p class="card-text" >Enter the reservation id delete your reservation</p>
+      <form action="./deleteres" method="POST">  
+    <div class="form-outline">
+        <input type="text"  name="deleteres"  />
+  
+    </div>
+         
+
+    <br>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+  </div>
+</div>
+    
+         </div>
+    
+    
+    
+    
+     <div class="col-lg-4">
+         
+    <div class="card" style="width: 33rem;">
+  <div class="card-body">
+      <h5 style="font-weight: bolder">update reservation date</h5>
+      <br>
+      <p class="card-text" >reservation id</p>
+    <div class="form-outline">
+        <input type="text"  name="deleteres"  />
+  
+</div>
+      
+      
+      <p class="card-text" >Arrival Date</p>
+    <div class="form-outline">
+        <input type="date"  name="deleteres"  />
+  
+</div>
+      
+      
+            <p class="card-text" >Departure Date</p>
+    <div class="form-outline">
+        <input type="date"  name="deleteres"  />
+  
+</div>
+      
+      
+   
+    <br>
+    <button type="button" class="btn btn-warning">update</button>
+  </div>
+</div>
+    
+         </div>
+    
+    
+    
+    
+    
+
+    </div>
+    <br>
+    <h3>My Reservations</h3>
+    <br>
+    <div class="card" style="border-radius: 15px ">  
+        <div class="card-body">
 <table class="table">
 <tr>
       <th scope="col">reservation_id</th>
@@ -65,6 +180,7 @@ while (rs.next()) {
      
       <td><%=rs.getString("arrival_date")%></td>
       <td><%=rs.getString("depature_date")%></td>
+      
     </tr>
   
  </tbody>
@@ -86,20 +202,26 @@ connection.close();
 out.println("Unable to connect to database.");
 }
 %>
-</TABLE><TABLE>
+</TABLE>
+</div>
+</div>
+</div>
+<TABLE>
+    
 <TR>
 <TD><FORM ACTION="welcome_to_database_query.jsp" method="get" >
-<button type="submit"><-- back</button></TD>
+
 </TR>
 </TABLE>
 </font>
 
 </body>
 </html>
-          
+<br>
+<br>
 
    
-
+<%@ include file="footer.jsp"%>
                     
     
         
