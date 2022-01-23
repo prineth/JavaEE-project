@@ -40,13 +40,9 @@
             >
               Book Now</a
             >
-<!--            <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="#"
-              target="_blank"
-              role="button"
-              >About</a
-            >-->
+           
+            <form action="EmailSendingServlet" method="post" ><input type="submit" value="Send"/></form>
+           
           </div>
         </div>
       </div>
