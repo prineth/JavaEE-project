@@ -8,7 +8,9 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import javax.mail.MessagingException;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -64,15 +66,24 @@ public class doneavailable extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+ 
+    // reads SMTP server setting from web.xml file
+    
+    private String host;
+    private String port;
+    private String user;
+    private String pass;
+    
+    @Override
+    public void init() {
+        // reads SMTP server setting from web.xml file
+        ServletContext context = getServletContext();
+        host = context.getInitParameter("host");
+        port = context.getInitParameter("port");
+        user = context.getInitParameter("user");
+        pass = context.getInitParameter("pass");
+    }
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -121,7 +132,29 @@ public class doneavailable extends HttpServlet {
                RequestDispatcher rd = request.getRequestDispatcher("./payment.jsp");
                rd.forward(request, response);
          
-          
+//------------------  email---------------------------------------
+               
+           String recipient = (String) session.getAttribute("email");
+//        String recipient = "prinethfernandox@gmail.com";
+//        String subject = request.getParameter("subject");
+        String subject = "Goldern Reach booking confirmation";
+//        String content = request.getParameter("content");
+        String content = "Your room is successfully booked. "
+                + "If u need update your reservation visit link below."
+                + " Link: http://localhost:8080/JavaEE-project/profile.jsp ";
+ 
+        String resultMessage = "";
+ 
+        try {
+            EmailUtility.sendEmail(host, port, user, pass, recipient, subject,content);
+            resultMessage = "The e-mail was sent successfully";
+        } catch (MessagingException ex) {
+            resultMessage = "There were an error: " + ex.getMessage();
+        } finally {
+            request.setAttribute("Message", resultMessage);
+            getServletContext().getRequestDispatcher("/Result.jsp").forward(
+                    request, response);
+        }
           
        
     }
