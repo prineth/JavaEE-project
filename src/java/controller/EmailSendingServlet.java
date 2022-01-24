@@ -1,7 +1,6 @@
 package controller;
  
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.mail.MessagingException;
  
 import javax.servlet.ServletContext;
@@ -10,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
  
 
 @WebServlet("/EmailSendingServlet")
@@ -32,13 +32,10 @@ public class EmailSendingServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-        
-        PrintWriter out = response.getWriter();
-        String email = request.getParameter("email");
-        
         // reads form fields
-//        String recipient = request.getParameter("recipient");
-        String recipient = email;
+        HttpSession session = request.getSession();
+        String recipient = (String) session.getAttribute("email");
+//        String recipient = "prinethfernandox@gmail.com";
 //        String subject = request.getParameter("subject");
         String subject = "Goldern Reach booking confirmation";
 //        String content = request.getParameter("content");

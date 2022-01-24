@@ -7,7 +7,7 @@
 <%@ page import="java.io.*" %> 
 <html>
 <head>
-<title>display data from the table using jsp</title>
+<title>Profile</title>
 </head>
 <body>
 
