@@ -1,3 +1,5 @@
+<%@ page import="java.sql.*" %>
+<%@ page import="java.io.*" %> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +49,33 @@
     </style>
 </head>
 <body>
+     <%
+            try {
+                /* Create string of connection url within specified format with machine
+           name, port number and database name. Here machine name id localhost and 
+           database name is student. */
+                String connectionURL = "jdbc:mysql://localhost:3306/hotel";
+                // declare a connection by using Connection interface
+                Connection connection = null;
+                /* declare object of Statement interface that is used for executing sql 
+           statements. */
+                Statement statement = null;
+                // declare a resultset that uses as a table for output data from tha table.
+                ResultSet rs = null;
+                // Load JBBC driver "com.mysql.jdbc.Driver"
+                Class.forName("com.mysql.jdbc.Driver").newInstance();
+                /* Create a connection by using getConnection() method that takes parameters 
+           of string type connection url, user name and password to connect to database.*/
+                connection = DriverManager.getConnection(connectionURL, "root", "");
+                /* createStatement() is used for create statement object that is used for 
+           sending sql statements to the specified database. */
+                statement = connection.createStatement();
+
+                //int user_id = (int)session.getAttribute("userid"); 
+                // sql query to retrieve values from the secified table.
+                String QueryString = "SELECT * FROM room_reservation";
+                rs = statement.executeQuery(QueryString);
+        %>
     <nav class="navbar navbar-light bg-light p-3">
         <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
             <a class="navbar-brand" href="#">
@@ -128,69 +157,50 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
-                                        <thead>
-                                          <tr>
-                                            <th scope="col">Order</th>
-                                            <th scope="col">Product</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col"></th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <th scope="row">17371705</th>
-                                            <td>Volt Premium Bootstrap 5 Dashboard</td>
-                                            <td>johndoe@gmail.com</td>
-                                            <td>€61.11</td>
-                                            <td>Aug 31 2020</td>
-                                            <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">17370540</th>
-                                            <td>Pixel Pro Premium Bootstrap UI Kit</td>
-                                            <td>jacob.monroe@company.com</td>
-                                            <td>$153.11</td>
-                                            <td>Aug 28 2020</td>
-                                            <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">17371705</th>
-                                            <td>Volt Premium Bootstrap 5 Dashboard</td>
-                                            <td>johndoe@gmail.com</td>
-                                            <td>€61.11</td>
-                                            <td>Aug 31 2020</td>
-                                            <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">17370540</th>
-                                            <td>Pixel Pro Premium Bootstrap UI Kit</td>
-                                            <td>jacob.monroe@company.com</td>
-                                            <td>$153.11</td>
-                                            <td>Aug 28 2020</td>
-                                            <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">17371705</th>
-                                            <td>Volt Premium Bootstrap 5 Dashboard</td>
-                                            <td>johndoe@gmail.com</td>
-                                            <td>€61.11</td>
-                                            <td>Aug 31 2020</td>
-                                            <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">17370540</th>
-                                            <td>Pixel Pro Premium Bootstrap UI Kit</td>
-                                            <td>jacob.monroe@company.com</td>
-                                            <td>$153.11</td>
-                                            <td>Aug 28 2020</td>
-                                            <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
+                                            <tr>
+                                                <th scope="col">Reservation ID</th>
+                                                <th scope="col">Room ID</th>
+                                                <th scope="col">User ID</th>
+                                                <th scope="col">Per-Room charge</th>
+                                                <th scope="col">Nights</th>
+                                                <th scope="col">No. of guests</th>
+                                                <th scope="col">Arrival</th>
+                                                <th scope="col">Departure</th>
+                                            </tr>
+                                            <%
+                                                while (rs.next()) {
+                                            %>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><%=rs.getInt("res_id")%></th>
+                                                    <td><%=rs.getInt("room_id")%></td>
+                                                    <td><%=rs.getInt("user_id")%></td>
+                                                    <td><%=rs.getFloat("perroom_fee")%></td>
+                                                    <td><%=rs.getInt("nights")%></td>
+                                                    <td><%=rs.getInt("no_of_guests")%></td>
+                                                    <td><%=rs.getDate("arrival_date")%></td>
+                                                    <td><%=rs.getDate("depature_date")%></td>
+                                                </tr>
+                                            </tbody>
+                                    </div>
+
+                                    <% } %>
+                                    <%
+                                        // close all the connections.
+                                        rs.close();
+                                        statement.close();
+                                        connection.close();
+                                    } catch (Exception ex) {
+                                    %>
+                                    </font>
+                                    <font size="+3" color="red"></b>
+                                    <%
+                                            out.println("Unable to connect to database.");
+                                        }
+                                    %>
+                                    </table>
                                 </div>
-                                <a href="#" class="btn btn-block btn-light">View all</a>
+                                
                             </div>
                         </div>
                     </div>
