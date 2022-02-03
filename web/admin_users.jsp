@@ -74,7 +74,7 @@
 
                 //int user_id = (int)session.getAttribute("userid"); 
                 // sql query to retrieve values from the secified table.
-                String QueryString = "SELECT * FROM user";
+                String QueryString = "SELECT id,fname,lname,email,number FROM user;";
                 rs = statement.executeQuery(QueryString);
         %>
 
@@ -165,7 +165,7 @@
                                                 <th scope="col">First Name</th>
                                                 <th scope="col">Last Name</th>
                                                 <th scope="col">Email</th>
-                                                <th scope="col">Password</th>
+
                                                 <th scope="col">Contact</th>
                                             </tr>
                                             <%
@@ -177,7 +177,7 @@
                                                     <td><%=rs.getString("fname")%></td>
                                                     <td><%=rs.getString("lname")%></td>
                                                     <td><%=rs.getString("email")%></td>
-                                                    <td><%=rs.getString("password")%></td>
+
                                                     <td><%=rs.getInt("number")%></td>
                                                 </tr>
                                             </tbody>
@@ -199,7 +199,7 @@
                                     %>
                                     </table>
                                 </div>
-                                <a href="#" class="btn btn-block btn-light">View all</a>
+
                             </div>
                         </div>
                     </div>
@@ -211,6 +211,46 @@
                             </div>
                         </div>
                     </div>
+            </div><br>
+
+            <div class="row">
+                <div class="card col-sm-3" style="width: 25rem; margin-right:15px; margin-left:11px;">
+                    <div class="card-body">
+                        <h5 style="font-weight: bolder">Update User</h5>
+                        <br>
+                        <p class="card-text" >Enter the reservation id delete your reservation</p>
+                        <form action="./deleteres" method="POST">  
+                            <div class="form-outline">
+                                <input type="text"  name="deleteres"  />
+
+                            </div>
+
+
+                            <br>
+                            <button type="submit" class="btn btn-success">Update guest</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="card col-sm-3" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 style="font-weight: bolder">Delete User</h5>
+                        <br>
+                        <p class="card-text" >Enter the reservation id delete your reservation</p>
+                        <form action="./deleteres" method="POST">  
+                            <div class="form-outline">
+                                <input type="text"  name="deleteres"  />
+
+                            </div>
+
+
+                            <br>
+                            <button type="submit" class="btn btn-danger">Delete guest</button>
+                        </form>
+                    </div>
+
+                </div>
+
             </div>
             <footer class="pt-5 d-flex justify-content-between">
                 <span>Copyright © 2019-2020 <b>Goldern reach</b></span>
