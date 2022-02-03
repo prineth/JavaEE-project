@@ -219,13 +219,10 @@
                         <h5 style="font-weight: bolder">Update User</h5>
                         <br>
                         <p class="card-text" >Enter the reservation id delete your reservation</p>
-                        <form action="./deleteres" method="POST">  
+                        <form action="./guestUpdate" method="post">  
                             <div class="form-outline">
-                                <input type="text"  name="deleteres"  />
-
+                                <input type="text"  name="guestID_update"  />
                             </div>
-
-
                             <br>
                             <button type="submit" class="btn btn-success">Update guest</button>
                         </form>
@@ -237,13 +234,10 @@
                         <h5 style="font-weight: bolder">Delete User</h5>
                         <br>
                         <p class="card-text" >Enter the reservation id delete your reservation</p>
-                        <form action="./deleteres" method="POST">  
+                        <form action="./guestDelete" method="post">  
                             <div class="form-outline">
-                                <input type="text"  name="deleteres"  />
-
+                                <input type="text"  name="guestID"  />
                             </div>
-
-
                             <br>
                             <button type="submit" class="btn btn-danger">Delete guest</button>
                         </form>

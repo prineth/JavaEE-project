@@ -46,6 +46,14 @@
         <servlet-name>adminLogin</servlet-name>
         <servlet-class>controller.adminController.adminLogin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>guestDelete</servlet-name>
+        <servlet-class>controller.adminController.guestDelete</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>guestUpdate</servlet-name>
+        <servlet-class>controller.adminController.guestUpdate</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
@@ -79,11 +87,17 @@
         <servlet-name>adminLogin</servlet-name>
         <url-pattern>/adminLogin</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>guestDelete</servlet-name>
+        <url-pattern>/guestDelete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>guestUpdate</servlet-name>
+        <url-pattern>/guestUpdate</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
- 
 </web-app>
