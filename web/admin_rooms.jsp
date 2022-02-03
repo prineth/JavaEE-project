@@ -49,26 +49,26 @@
         </style>
     </head>
     <body>
-         <%
+        <%
             try {
                 /* Create string of connection url within specified format with machine
-           name, port number and database name. Here machine name id localhost and 
-           database name is student. */
+          name, port number and database name. Here machine name id localhost and 
+          database name is student. */
                 String connectionURL = "jdbc:mysql://localhost:3306/hotel";
                 // declare a connection by using Connection interface
                 Connection connection = null;
                 /* declare object of Statement interface that is used for executing sql 
-           statements. */
+          statements. */
                 Statement statement = null;
                 // declare a resultset that uses as a table for output data from tha table.
                 ResultSet rs = null;
                 // Load JBBC driver "com.mysql.jdbc.Driver"
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
                 /* Create a connection by using getConnection() method that takes parameters 
-           of string type connection url, user name and password to connect to database.*/
+          of string type connection url, user name and password to connect to database.*/
                 connection = DriverManager.getConnection(connectionURL, "root", "");
                 /* createStatement() is used for create statement object that is used for 
-           sending sql statements to the specified database. */
+          sending sql statements to the specified database. */
                 statement = connection.createStatement();
 
                 //int user_id = (int)session.getAttribute("userid"); 
@@ -146,9 +146,7 @@
 
                     <h1 class="h2">Rooms</h1>
                     <p>This is the Golden Reach Admin Dashboard</p>
-                    <div class="row my-4">
-
-                    </div>
+                   
                     <div class="row">
                         <div class="col-12 col-xl-8 mb-4 mb-lg-0">
                             <div class="card">
@@ -194,52 +192,95 @@
                                         }
                                     %>
                                     </table>
-                                    </div>
-                                   
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-xl-4">
-                            <div class="card">
-                                <h5 class="card-header">Rooms last 6 months</h5>
-                                <div class="card-body">
-                                    <div id="traffic-chart"></div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <footer class="pt-5 d-flex justify-content-between">
-                        <span>Copyright © 2019-2020 <b>Goldern reach</b></span>
-                        <ul class="nav m-0">
-                            <li class="nav-item">
-                                <a class="nav-link text-secondary" aria-current="page" href="#">Privacy Policy</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-secondary" href="#">Terms and conditions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-secondary" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </footer>
-                </main>
+                                    
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <h5 class="card-header">Rooms last 6 months</h5>
+                            <div class="card-body">
+                                <div id="traffic-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"style="margin-top:15px;">
+
+                        <div class="card col-sm-3" style="width: 25rem; margin-right:15px; margin-left:12px;">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder">Add Room</h5>
+                                <br>
+                                <p class="card-text" >You can add user here<br> Click the button</p>
+                                <form action="admin/room/add_room.jsp" method="POST">  
+                                    <br>
+                                    <button type="submit" class="btn btn-warning">Add new room</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card col-sm-3" style="width: 25rem; margin-right:15px;">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder">Update Room</h5>
+                                <br>
+                                <p class="card-text" >Enter the reservation id delete your reservation</p>
+                                <form action="./deleteres" method="POST">  
+                                    <div class="form-outline">
+                                        <input type="text"  name="deleteres"  />
+                                    </div>
+                                    <br>
+                                    <button type="submit" class="btn btn-success">Update room</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card col-sm-3" style="width: 25rem;">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder">Delete Room</h5>
+                                <br>
+                                <p class="card-text" >Enter the reservation id delete your reservation</p>
+                                <form action="./deleteres" method="POST">  
+                                    <div class="form-outline">
+                                        <input type="text"  name="deleteres"  />
+                                    </div>
+                                    <br>
+                                    <button type="submit" class="btn btn-danger">Delete room</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
             </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-        <!-- Github buttons -->
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <script>
-            new Chartist.Line('#traffic-chart', {
-                labels: ['January', 'Februrary', 'March', 'April', 'May', 'June'],
-                series: [
-                    [23000, 25000, 19000, 34000, 56000, 64000]
-                ]
-            }, {
-                low: 0,
-                showArea: true
-            });
-        </script>
-    </body>
+            <footer class="pt-5 d-flex justify-content-between">
+                <span>Copyright © 2019-2020 <b>Goldern reach</b></span>
+                <ul class="nav m-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Terms and conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Contact</a>
+                    </li>
+                </ul>
+            </footer>
+        </main>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script>
+    new Chartist.Line('#traffic-chart', {
+        labels: ['January', 'Februrary', 'March', 'April', 'May', 'June'],
+        series: [
+            [23000, 25000, 19000, 34000, 56000, 64000]
+        ]
+    }, {
+        low: 0,
+        showArea: true
+    });
+</script>
+</body>
 </html>
