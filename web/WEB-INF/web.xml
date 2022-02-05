@@ -54,6 +54,18 @@
         <servlet-name>guestUpdate</servlet-name>
         <servlet-class>controller.adminController.guestUpdate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>roomDelete</servlet-name>
+        <servlet-class>controller.adminController.roomDelete</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>roomUpdate</servlet-name>
+        <servlet-class>controller.adminController.roomUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>roomAdd</servlet-name>
+        <servlet-class>controller.adminController.roomAdd</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
@@ -94,6 +106,18 @@
     <servlet-mapping>
         <servlet-name>guestUpdate</servlet-name>
         <url-pattern>/guestUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>roomDelete</servlet-name>
+        <url-pattern>/roomDelete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>roomUpdate</servlet-name>
+        <url-pattern>/roomUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>roomAdd</servlet-name>
+        <url-pattern>/roomAdd</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

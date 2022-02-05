@@ -177,7 +177,6 @@
                                                     <td><%=rs.getString("fname")%></td>
                                                     <td><%=rs.getString("lname")%></td>
                                                     <td><%=rs.getString("email")%></td>
-
                                                     <td><%=rs.getInt("number")%></td>
                                                 </tr>
                                             </tbody>
@@ -242,9 +241,7 @@
                             <button type="submit" class="btn btn-danger">Delete guest</button>
                         </form>
                     </div>
-
                 </div>
-
             </div>
             <footer class="pt-5 d-flex justify-content-between">
                 <span>Copyright © 2019-2020 <b>Goldern reach</b></span>
