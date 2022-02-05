@@ -19,40 +19,32 @@ import java.util.logging.Logger;
 public class deleteresv {
 
     String url = "jdbc:mysql://localhost:3306/hotel";
-String driver  = "com.mysql.jdbc.Driver";
-Statement st;
+    String driver = "com.mysql.jdbc.Driver";
+    Statement st;
+
     public void deleteresbyid(int number) {
-       
-         ConnectDB()  ;
-        String query="delete from room_reservation where res_id="+number+"" ; 
-        
-        
-            try {
-                st.executeUpdate(query);
-            } catch (SQLException ex) {
-                Logger.getLogger(addSignData.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        
+
+        ConnectDB();
+        String query = "delete from room_reservation where res_id=" + number + "";
+
+        try {
+            st.executeUpdate(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(addSignData.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
-    
-    
-    
-      private void ConnectDB() {
-       
-         try {
-             Class.forName(driver);
-             Connection con=DriverManager.getConnection(url, "root","");
-               st  = con.createStatement();
-         } catch (ClassNotFoundException | SQLException ex) {
-             Logger.getLogger(loginData.class.getName()).log(Level.SEVERE, null, ex);
-         }
-    
-     }
-    
+
+    private void ConnectDB() {
+
+        try {
+            Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, "root", "");
+            st = con.createStatement();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(loginData.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
 }
-
-
-
-
-
-  

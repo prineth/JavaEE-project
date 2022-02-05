@@ -146,7 +146,7 @@
 
                     <h1 class="h2">Rooms</h1>
                     <p>This is the Golden Reach Admin Dashboard</p>
-                   
+
                     <div class="row">
                         <div class="col-12 col-xl-8 mb-4 mb-lg-0">
                             <div class="card">
@@ -197,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                                    
+
                     <div class="col-12 col-xl-4">
                         <div class="card">
                             <h5 class="card-header">Rooms last 6 months</h5>
@@ -223,11 +223,17 @@
                             <div class="card-body">
                                 <h5 style="font-weight: bolder">Update Room</h5>
                                 <br>
-                                <p class="card-text" >Enter the reservation id delete your reservation</p>
+                                <p class="card-text" >Enter the reservation id update your room</p>
                                 <form action="./deleteres" method="POST">  
                                     <div class="form-outline">
-                                        <input type="text"  name="deleteres"  />
+                                        room_id <input type="text"  name="roomID"  />
+                                        room_type <input type="text"  name="roomID"  />
+                                        room_bookStatus <input type="text"  name="roomID"  />
+                                        room_charge <input type="text"  name="roomID"  />
+                                        room_quantity <input type="text"  name="roomID"  />
+                                        room_description<input type="text"  name="roomID"  />
                                     </div>
+
                                     <br>
                                     <button type="submit" class="btn btn-success">Update room</button>
                                 </form>
@@ -237,10 +243,10 @@
                             <div class="card-body">
                                 <h5 style="font-weight: bolder">Delete Room</h5>
                                 <br>
-                                <p class="card-text" >Enter the reservation id delete your reservation</p>
-                                <form action="./deleteres" method="POST">  
+                                <p class="card-text" >Enter the reservation id delete your room</p>
+                                <form action="./roomDelete" method="post">  
                                     <div class="form-outline">
-                                        <input type="text"  name="deleteres"  />
+                                        <input type="text"  name="roomID"  />
                                     </div>
                                     <br>
                                     <button type="submit" class="btn btn-danger">Delete room</button>
@@ -250,7 +256,7 @@
                     </div>
             </div>
             <footer class="pt-5 d-flex justify-content-between">
-                <span>Copyright Â© 2019-2020 <b>Goldern reach</b></span>
+                <span>Copyright © 2019-2020 <b>Golden reach</b></span>
                 <ul class="nav m-0">
                     <li class="nav-item">
                         <a class="nav-link text-secondary" aria-current="page" href="#">Privacy Policy</a>

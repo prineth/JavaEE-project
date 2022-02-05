@@ -131,36 +131,33 @@
                         <div class="card-body">
 
 
-                            <form action="./deleteres" method="POST">
+                            <form action="../../roomAdd" method="POST">
                                 <table border="0" cellpadding="10">
                                     <tr>
-                                        <td>First name</td>
-                                        <td><input type="text"  name="deleteres"  /></td>
+                                        <td>Room type</td>
+                                        <td><input type="text"  name="room_type"  /></td>
                                     </tr>
                                     <tr>
-                                        <td>Last name</td>
-                                        <td><input type="text"  name="deleteres"  /></td>
+                                        <td>Room status</td>
+                                        <td><input type="text"  name="room_bookStatus"  /></td>
                                     </tr>
                                     <tr>
-                                        <td>Email</td>
-                                        <td><input type="text"  name="deleteres"  /></td>
+                                        <td>Room charge</td>
+                                        <td><input type="text"  name="room_charge"  /></td>
                                     </tr>
                                     <tr>
-                                        <td>Password</td>
-                                        <td><input type="text"  name="deleteres"  /></td>
+                                        <td>Room quantity</td>
+                                        <td><input type="number"  name="room_quantity"  /></td>
                                     </tr>
                                     <tr>
-                                        <td>Contact</td>
-                                        <td><input type="text"  name="deleteres"  /></td>
+                                        <td>Room description</td>
+                                        <td><input type="text"  name="room_description"  /></td>
                                     </tr>
                                 </table>
-
-
                                 <br>
-                                <button type="submit" class="btn btn-warning">Add room</button>
+                                <button type="submit" class="btn btn-warning">Add new room</button>
                             </form>
                         </div>
-
                     </div>
 
 

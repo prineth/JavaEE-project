@@ -177,7 +177,6 @@
                                                     <td><%=rs.getString("fname")%></td>
                                                     <td><%=rs.getString("lname")%></td>
                                                     <td><%=rs.getString("email")%></td>
-
                                                     <td><%=rs.getInt("number")%></td>
                                                 </tr>
                                             </tbody>
@@ -219,13 +218,10 @@
                         <h5 style="font-weight: bolder">Update User</h5>
                         <br>
                         <p class="card-text" >Enter the reservation id delete your reservation</p>
-                        <form action="./deleteres" method="POST">  
+                        <form action="./guestUpdate" method="post">  
                             <div class="form-outline">
-                                <input type="text"  name="deleteres"  />
-
+                                <input type="text"  name="guestID_update"  />
                             </div>
-
-
                             <br>
                             <button type="submit" class="btn btn-success">Update guest</button>
                         </form>
@@ -237,20 +233,15 @@
                         <h5 style="font-weight: bolder">Delete User</h5>
                         <br>
                         <p class="card-text" >Enter the reservation id delete your reservation</p>
-                        <form action="./deleteres" method="POST">  
+                        <form action="./guestDelete" method="post">  
                             <div class="form-outline">
-                                <input type="text"  name="deleteres"  />
-
+                                <input type="text"  name="guestID"  />
                             </div>
-
-
                             <br>
                             <button type="submit" class="btn btn-danger">Delete guest</button>
                         </form>
                     </div>
-
                 </div>
-
             </div>
             <footer class="pt-5 d-flex justify-content-between">
                 <span>Copyright © 2019-2020 <b>Goldern reach</b></span>
