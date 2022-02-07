@@ -41,7 +41,7 @@
               Book Now</a
             >
            
-            <form action="EmailSendingServlet" method="post" ><input type="submit" value="Send"/></form>
+            
            
           </div>
         </div>

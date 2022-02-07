@@ -224,18 +224,39 @@
                                 <h5 style="font-weight: bolder">Update Room</h5>
                                 <br>
                                 <p class="card-text" >Enter the reservation id update your room</p>
-                                <form action="./deleteres" method="POST">  
+                                <form action="./roomUpdate" method="POST">  
                                     <div class="form-outline">
-                                        room_id <input type="text"  name="roomID"  />
-                                        room_type <input type="text"  name="roomID"  />
-                                        room_bookStatus <input type="text"  name="roomID"  />
-                                        room_charge <input type="text"  name="roomID"  />
-                                        room_quantity <input type="text"  name="roomID"  />
-                                        room_description<input type="text"  name="roomID"  />
+                                        <table border="0" cellpadding="2">
+                                            <tr>
+                                                <td>Room ID</td>
+                                                <td><input type="text"  name="room_id"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Room type</td>
+                                                <td><input type="text"  name="room_type"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Room status</td>
+                                                <td><input type="text"  name="room_bookStatus"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Room charge</td>
+                                                <td><input type="text"  name="room_charge"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Room quantity</td>
+                                                <td><input type="number"  name="room_quantity"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Room description</td>
+                                                <td><input type="text"  name="room_description"  /></td>
+                                            </tr>
+                                        </table>
                                     </div>
 
                                     <br>
                                     <button type="submit" class="btn btn-success">Update room</button>
+                                    <input type="reset" value="Clear" class="btn btn-primary">
                                 </form>
                             </div>
                         </div>

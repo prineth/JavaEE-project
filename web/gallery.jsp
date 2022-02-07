@@ -1,7 +1,7 @@
 <%@ include file="navBar.jsp" %>
-      
+      <br>
   <center><h1>Gallery</h1></center>
-    
+    <br>
    <!-- Gallery -->
 <div class="row">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">

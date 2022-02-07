@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controller.adminController;
+package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,14 +11,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.adminModel.mod_roomUpdate;
 
 /**
  *
  * @author user
  */
-public class roomUpdate extends HttpServlet {
+public class contactUs extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +35,10 @@ public class roomUpdate extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet roomUpdate</title>");
+            out.println("<title>Servlet contactUs</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet roomUpdate at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet contactUs at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -72,32 +70,7 @@ public class roomUpdate extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        processRequest(request, response);
-
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
-        int room_id = Integer.parseInt(request.getParameter("room_id"));
-        String room_type = request.getParameter("room_type");
-        String room_status = request.getParameter("room_bookStatus");
-        String room_charge = request.getParameter("room_charge");
-        int room_quantity = Integer.parseInt(request.getParameter("room_quantity"));
-        String room_description = request.getParameter("room_description");
-
-        out.println(room_id);
-        out.println(room_type);
-        out.println(room_status);
-        out.println(room_charge);
-        out.println(room_quantity);
-        out.println(room_description);
-
-        if ("".equals(room_type) || "".equals(room_status) || "".equals(room_charge) || "".equals(room_description)) {
-            out.println("Please fill all details");
-        } else {
-            mod_roomUpdate mruObj = new mod_roomUpdate();
-            mruObj.updateRoomById(room_id);
-        }
-
+        processRequest(request, response);
     }
 
     /**

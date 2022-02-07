@@ -66,6 +66,10 @@
         <servlet-name>roomAdd</servlet-name>
         <servlet-class>controller.adminController.roomAdd</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>contactUs</servlet-name>
+        <servlet-class>controller.contactUs</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
@@ -118,6 +122,10 @@
     <servlet-mapping>
         <servlet-name>roomAdd</servlet-name>
         <url-pattern>/roomAdd</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>contactUs</servlet-name>
+        <url-pattern>/contactUs</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
