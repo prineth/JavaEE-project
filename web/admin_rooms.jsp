@@ -198,14 +198,6 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-xl-4">
-                        <div class="card">
-                            <h5 class="card-header">Rooms last 6 months</h5>
-                            <div class="card-body">
-                                <div id="traffic-chart"></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row"style="margin-top:15px;">
 
                         <div class="card col-sm-3" style="width: 25rem; margin-right:15px; margin-left:12px;">
