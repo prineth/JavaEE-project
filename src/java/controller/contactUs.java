@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.contact_us;
 
 /**
  *
@@ -35,7 +36,7 @@ public class contactUs extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet contactUs</title>");            
+            out.println("<title>Servlet contactUs</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet contactUs at " + request.getContextPath() + "</h1>");
@@ -70,7 +71,24 @@ public class contactUs extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+//        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String subject = request.getParameter("subject");
+        String message = request.getParameter("message");
+//        
+//        out.println(name);
+//        out.println(email);
+//        out.println(subject);
+//        out.println(message);
+//        
+        contact_us contactObj = new contact_us();
+        contactObj.contactUsDetails(name, email, subject, message);
+        
+        response.sendRedirect("./contact_us.jsp");
     }
 
     /**

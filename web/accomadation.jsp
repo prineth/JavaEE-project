@@ -32,7 +32,7 @@
                 <div class="card-body">
 
                     <!--Title-->
-                    <h4 class="card-title text-center">Executive Room</h4>
+                    <h4 class="card-title text-center">Regular Room</h4>
                     <!--Text-->
                     <p class="card-text">The Executive Rooms come with a range of exclusive, intuitive services that spell out comfort, convenience & royal treatment.</p>
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
@@ -66,7 +66,7 @@
                 <!--Card content-->
                 <div class="card-body">
                     <!--Title-->
-                    <h4 class="card-title text-center">Superior Room</h4>
+                    <h4 class="card-title text-center">Deluxe Room</h4>
                     <!--Text-->
                     <p class="card-text">The Superior Rooms offer wonderfully spacious living spaces equipped with white marble bathrooms & foremost, modern amenities.</p>
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
@@ -97,7 +97,7 @@
                 <!--Card content-->
                 <div class="card-body">
                     <!--Title-->
-                    <h4 class="card-title text-center">Presidential Room</h4>
+                    <h4 class="card-title text-center">Executive  Room</h4>
                     <!--Text-->
                     <p class="card-text">Luxuriously furnished,extensive living area, provides guests with modern amenities.Our butler service will ensure to feel like royalty.</p>
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->

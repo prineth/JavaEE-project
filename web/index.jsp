@@ -110,7 +110,7 @@
             <div class="col-md-6 gx-5 mb-4">
               <h4><strong>Venues</strong></h4>
               <p class="text-muted">
-                
+                venues at our hotel are classified into three types. Those are the president, executive and superior. Each of those rooms is luxuriously designed. We provided all the facilities related to each type of room. We have provided you with high-quality beds and all the other accessories. We guarantee that you will be able to enjoy your vacation comfortably in our rooms.
               </p>
               
             </div>
@@ -127,7 +127,7 @@
                 data-mdb-ripple-color="light"
               >
                 <img
-                    src="Assets/image/home/resturents.png"
+                    src="https://www.restaurant-hospitality.com/sites/restaurant-hospitality.com/files/styles/article_featured_retina/public/gallery_promo_image/5_promo.jpg?itok=e1fqOUF2"
                   class="img-fluid"
                 />
                 <a href="#!">
@@ -154,7 +154,7 @@
 
         <!--Section: Content-->
         <section class="text-center">
-          <h4 class="mb-5"><strong>Facilis consequatur eligendi</strong></h4>
+          <h4 class="mb-5"><strong>Venues in Golden Reach</strong></h4>
 
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
@@ -164,7 +164,7 @@
                   data-mdb-ripple-color="light"
                 >
                   <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                    src="http://www.bedbreakfast.ee/wp-content/uploads/2016/10/hotel-room.jpg"
                     class="img-fluid"
                   />
                   <a href="#!">
@@ -175,12 +175,12 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Rooms</h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Button</a>
+                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Book</a>
                 </div>
               </div>
             </div>
@@ -192,7 +192,7 @@
                   data-mdb-ripple-color="light"
                 >
                   <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/023.jpg"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/214016136.jpg?k=4a89ccd66508692d986b5a7f7b2ed221879595d629f8f90ac1d75485d1c71e0c&o=&hp=1"
                     class="img-fluid"
                   />
                   <a href="#!">
@@ -203,12 +203,12 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Venues</h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Button</a>
+                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Book</a>
                 </div>
               </div>
             </div>
@@ -220,7 +220,7 @@
                   data-mdb-ripple-color="light"
                 >
                   <img
-                    src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
+                    src="https://pix5.agoda.net/hotelimages/44535/-1/1bcba46b296bde3b2ac8eafba48369c8.jpg"
                     class="img-fluid"
                   />
                   <a href="#!">
@@ -231,12 +231,12 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Restaurants & Bar</h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Button</a>
+                  <a href="#!" class="btn btn-primary" style="background-color: #B69101">Book</a>
                 </div>
               </div>
             </div>

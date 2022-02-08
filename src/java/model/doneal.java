@@ -19,49 +19,41 @@ import java.util.logging.Logger;
  * @author hirun
  */
 public class doneal {
- String url = "jdbc:mysql://localhost:3306/hotel";
-String driver  = "com.mysql.jdbc.Driver";
-Statement st;
 
+    String url = "jdbc:mysql://localhost:3306/hotel";
+    String driver = "com.mysql.jdbc.Driver";
+    Statement st;
 
-    public void availdone(int roomcount,String roomType,int userid,int nights,int noOfGuest,String ArrivalDate,String DepatureDate) {
-        
+    public void availdone(int roomcount, String roomType, int userid, int nights, int noOfGuest, String ArrivalDate, String DepatureDate) {
+
         ConnectDB();
-        
-        String query="CALL new_reserve_insert('"+roomType+"',"+userid+","+roomcount+","+nights+","+noOfGuest+",'"+ArrivalDate+"','"+DepatureDate+"')";
-        
-            try {
-                
-                
-                for(int i=0 ; i<roomcount ; i++){
-                    
-                        st.executeUpdate(query);
-                             
-                }
-                    
-                  
-              
-          
-                
-            } catch (SQLException ex) {
-                Logger.getLogger(loginData.class.getName()).log(Level.SEVERE, null, ex);
+
+        String query = "CALL new_reserve_insert('" + roomType + "'," + userid + "," + roomcount + "," + nights + "," + noOfGuest + ",'" + ArrivalDate + "','" + DepatureDate + "')";
+
+        try {
+
+            for (int i = 0; i < roomcount; i++) {
+
+                st.executeUpdate(query);
+
             }
-        
-        
+
+        } catch (SQLException ex) {
+            Logger.getLogger(loginData.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
-    
-    
-    
-      private void ConnectDB() {
-       
-         try {
-             Class.forName(driver);
-             Connection con=DriverManager.getConnection(url, "root","");
-               st  = con.createStatement();
-         } catch (ClassNotFoundException | SQLException ex) {
-             Logger.getLogger(loginData.class.getName()).log(Level.SEVERE, null, ex);
-         }
-    
-     }
-    
+
+    private void ConnectDB() {
+
+        try {
+            Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, "root", "");
+            st = con.createStatement();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(loginData.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
 }

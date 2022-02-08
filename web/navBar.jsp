@@ -53,37 +53,16 @@
                             <a class="nav-link active" aria-current="page" href="index.jsp">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gallery.jsp">Gallery</a>
+                            <a class="nav-link active" href="gallery.jsp">Gallery</a>
                         </li>
-                        <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="accomadation.jsp"
-                                id="navbarDropdownMenuLink"
-                                role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
-                                >
-                                Accomadation
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item" href="accomadation.jsp">Action</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="roomsAvaialable.jsp">Availability</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </li>
-                            </ul>
+                        <li>
+                            <a class="nav-link active" href="accomadation.jsp">Accommodation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about_us.jsp">About Us</a>
+                            <a class="nav-link active" href="about_us.jsp">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact_us.jsp">Contact Us</a>
+                            <a class="nav-link active" href="contact_us.jsp">Contact Us</a>
                         </li>
 
                     </ul>

@@ -27,14 +27,14 @@
         name, port number and database name. Here machine name id localhost and 
         database name is student. */
                 String connectionURL = "jdbc:mysql://localhost:3306/hotel";
-        // declare a connection by using Connection interface
+                // declare a connection by using Connection interface
                 Connection connection = null;
                 /* declare object of Statement interface that is used for executing sql 
         statements. */
                 Statement statement = null;
-        // declare a resultset that uses as a table for output data from tha table.
+                // declare a resultset that uses as a table for output data from tha table.
                 ResultSet rs = null;
-        // Load JBBC driver "com.mysql.jdbc.Driver"
+                // Load JBBC driver "com.mysql.jdbc.Driver"
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
                 /* Create a connection by using getConnection() method that takes parameters 
         of string type connection url, user name and password to connect to database.*/
@@ -43,8 +43,8 @@
         sending sql statements to the specified database. */
                 statement = connection.createStatement();
 
-        //int user_id = (int)session.getAttribute("userid"); 
-        // sql query to retrieve values from the secified table.
+                //int user_id = (int)session.getAttribute("userid"); 
+                // sql query to retrieve values from the secified table.
                 String QueryString = "SELECT * FROM room_reservation WHERE user_id='" + userid + "'";
                 rs = statement.executeQuery(QueryString);
         %>
@@ -142,10 +142,11 @@
 
             </div>
             <br>
-            <h3>My Reservations</h3>
+
             <br>
             <div class="card" style="border-radius: 15px ">  
                 <div class="card-body">
+                    <h4 style="text-align: center">My Reservations</h4>
                     <table class="table">
                         <tr>
                             <th scope="col">reservation_id</th>
@@ -176,31 +177,42 @@
 
 
 
-                <% } %>
-                <%
-                // close all the connections.
-                    rs.close();
-                    statement.close();
-                    connection.close();
-                } catch (Exception ex) {
-                %>
+                <% }%>
+
                 </font>
                 <font size="+3" color="red"></b>
-                    <%
-                            out.println("Unable to connect to database.");
-                        }
-                    %>
+
                     </TABLE>
             </div>
         </div>
+
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="card" style="border-radius: 15px ">  
+                    <div class="card-body">
+                        <div class="col-md-12 offset-md-12">
+
+                            <form method="post" action="./feedback" class="row g-3">
+                                <h4 style="text-align: center" class="text-dark ">Give your feedbacks here</h4>
+                                <div class="col-12">
+                                    <label class="text-dark" style="font-size: 20px">Message</label>
+                                    <textarea type="text" name="feedback" class="form-control" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-block text-light" style="background-color: #B69101;">Send</button>
+                                </div>
+                            </form><br>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <TABLE>
 
-        <TR>
-            <TD><FORM ACTION="welcome_to_database_query.jsp" method="get" >
-
-        </TR>
-    </TABLE>
 </font>
 
 </body>
@@ -211,5 +223,15 @@
 
 <%@ include file="footer.jsp"%>
 
-
+<%
+    // close all the connections.
+    rs.close();
+    statement.close();
+    connection.close();
+} catch (Exception ex) {
+%>
+<%
+        out.println("Unable to connect to database.");
+    }
+%>
 

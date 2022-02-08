@@ -6,6 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.feedback_mod;
 
 /**
  *
@@ -30,7 +32,7 @@ public class feedback extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet feedback</title>");            
+            out.println("<title>Servlet feedback</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet feedback at " + request.getContextPath() + "</h1>");
@@ -65,20 +67,21 @@ public class feedback extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        processRequest(request, response);
+
+//        processRequest(request, response);
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
+        HttpSession session = request.getSession();
+        int guestid = (Integer) session.getAttribute("userid");
+        
         String feedBackMsg = request.getParameter("feedback");
         
-        try{
-        }
+        feedback_mod feedObj = new feedback_mod();
+        feedObj.feedbackDetails(guestid, feedBackMsg);
         
-        catch(Exception se){
-        }
-        
-        
+        response.sendRedirect("./profile.jsp");
+
     }
 
     /**
