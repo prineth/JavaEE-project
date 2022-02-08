@@ -29,8 +29,7 @@ public class dbcon {
         connectionProps.put("user", "root");
         connectionProps.put("password", "");
         // port & db name 
-        conn = DriverManager.getConnection("jdbc:mysql://"
-                + "localhost" + ":" + "3306" + "/" + "hotel",
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel",
                 connectionProps);
     }
 

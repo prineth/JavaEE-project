@@ -232,14 +232,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-4">
-                        <div class="card">
-                            <h5 class="card-header">Traffic last 6 months</h5>
-                            <div class="card-body">
-                                <div id="traffic-chart"></div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <footer class="pt-5 d-flex justify-content-between">
                     <span>Copyright © 2019-2020 <b>Goldern reach</b></span>
@@ -263,16 +256,6 @@
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script>
-        new Chartist.Line('#traffic-chart', {
-            labels: ['January', 'Februrary', 'March', 'April', 'May', 'June'],
-            series: [
-                [23000, 25000, 19000, 34000, 56000, 64000]
-            ]
-            }, {
-            low: 0,
-            showArea: true
-        });
-    </script>
+    
 </body>
 </html>
