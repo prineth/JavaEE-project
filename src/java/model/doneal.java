@@ -38,10 +38,7 @@ Statement st;
                         st.executeUpdate(query);
                              
                 }
-                    
-                  
-              
-          
+
                 
             } catch (SQLException ex) {
                 Logger.getLogger(loginData.class.getName()).log(Level.SEVERE, null, ex);
