@@ -7,11 +7,13 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.deleteresv;
 
 /**
@@ -76,12 +78,22 @@ public class deleteres extends HttpServlet {
         
         
         PrintWriter out = response.getWriter();
-	
+        HttpSession session = request.getSession();
+	int userid = (Integer) session.getAttribute("userid");
         int number  =  Integer.parseInt(request.getParameter("deleteres"));
         
         
+        
         deleteresv c = new deleteresv();
-         c.deleteresbyid(number); 
+        String news = c.deleteresbyid(number,userid); 
+        
+       
+       
+        
+        request.setAttribute("messageTwo",news);
+        RequestDispatcher rd = request.getRequestDispatcher("./profile.jsp");
+        rd.forward(request, response);
+       
          
          out.println(number);
          

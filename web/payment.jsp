@@ -3,7 +3,16 @@
     Created on : Jan 20, 2022, 11:17:32 AM
     Author     : hirun
 --%>
-
+   <%
+           response.setHeader("Cache-control","no-cache, no-store, must-revalidate");
+           response.setHeader("pragma", "no-cache");
+           response.setHeader("Expires", "0");
+            
+           if(session.getAttribute("userid")== null){
+               response.sendRedirect("login.jsp");
+           }
+            
+ %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

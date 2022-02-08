@@ -88,6 +88,15 @@
                     <li class="nav-item" style="display:<%=csss%>;">
                         <a class="nav-link" href="profile.jsp">profile</a>
                     </li>
+                    
+                    <form action="./logout" method="POST">
+                    <li class="nav-item" style="display:<%=csss%>;">
+                        <button type="submit" style="border:none;background-color:#B69101;color: white;margin-top: 8px">Logout</button>
+                        
+                    </li>
+                    </form>
+                    
+                    
                 </ul>
 
             </div>

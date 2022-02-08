@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.bookingThread;
 import model.doneal;
 
 /**
@@ -43,7 +44,7 @@ public class doneavailable extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet doneavailable</title>");            
+            out.println("<title>Servlet doneavailable</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet doneavailable at " + request.getContextPath() + "</h1>");
@@ -66,14 +67,13 @@ public class doneavailable extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
- 
+
     // reads SMTP server setting from web.xml file
-    
     private String host;
     private String port;
     private String user;
     private String pass;
-    
+
     @Override
     public void init() {
         // reads SMTP server setting from web.xml file
@@ -83,58 +83,51 @@ public class doneavailable extends HttpServlet {
         user = context.getInitParameter("user");
         pass = context.getInitParameter("pass");
     }
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-     PrintWriter out = response.getWriter();
-          
-     
-        
-         HttpSession session = request.getSession();
-         int room= (int)session.getAttribute("rooms");
-         String roomType= (String)session.getAttribute("roomType"); 
-         
-         out.println(room);
-         out.println(roomType);
-         
-         int userid= (int)session.getAttribute("userid");
-         int nights = (int)session.getAttribute("nights");
-         int noOfGuest = (int)session.getAttribute("noOfGuest");
-         String ArrivalDate = (String)session.getAttribute("ArrivalDate"); 
-         String DepatureDate = (String)session.getAttribute("DepatureDate"); 
-         
-         
-         
-         
-         doneal c = new doneal();
-         c.availdone(room,roomType,userid,nights,noOfGuest,ArrivalDate,DepatureDate); 
-         
-         
-         
-          
-          float roomPrice = 0;
-          
-          if("Regular".equals(roomType)){
-              roomPrice = 10000;
-          }
-           if("Deluxe".equals(roomType)){
-              roomPrice = 20000;
-          }
-            if("Executive".equals(roomType)){
-              roomPrice = 30000;
-          }
-          
-          float fullroomprice = room*roomPrice;
-          
-          request.setAttribute("roomsprice",fullroomprice);
-               RequestDispatcher rd = request.getRequestDispatcher("./payment.jsp");
-               rd.forward(request, response);
-         
+
+        PrintWriter out = response.getWriter();
+
+        HttpSession session = request.getSession();
+        int room = (int) session.getAttribute("rooms");
+        String roomType = (String) session.getAttribute("roomType");
+
+        out.println(room);
+        out.println(roomType);
+
+        int userid = (int) session.getAttribute("userid");
+        int nights = (int) session.getAttribute("nights");
+        int noOfGuest = (int) session.getAttribute("noOfGuest");
+        String ArrivalDate = (String) session.getAttribute("ArrivalDate");
+        String DepatureDate = (String) session.getAttribute("DepatureDate");
+
+        doneal c = new doneal();
+        bookingThread news = new bookingThread();
+        //c.availdone(room, roomType, userid, nights, noOfGuest, ArrivalDate, DepatureDate);
+        news.availdoneThread(room, roomType, userid, nights, noOfGuest, ArrivalDate, DepatureDate);
+
+        float roomPrice = 0;
+
+        if ("Regular".equals(roomType)) {
+            roomPrice = 10000;
+        }
+        if ("Deluxe".equals(roomType)) {
+            roomPrice = 20000;
+        }
+        if ("Executive".equals(roomType)) {
+            roomPrice = 30000;
+        }
+
+        float fullroomprice = room * roomPrice;
+
+        request.setAttribute("roomsprice", fullroomprice);
+        RequestDispatcher rd = request.getRequestDispatcher("./payment.jsp");
+        rd.forward(request, response);
+
 //------------------  email---------------------------------------
-               
-           String recipient = (String) session.getAttribute("email");
+        String recipient = (String) session.getAttribute("email");
 //        String recipient = "prinethfernandox@gmail.com";
 //        String subject = request.getParameter("subject");
         String subject = "Goldern Reach booking confirmation";
@@ -142,11 +135,11 @@ public class doneavailable extends HttpServlet {
         String content = "Your room is successfully booked. "
                 + "If u need update your reservation visit link below."
                 + " Link: http://localhost:8080/JavaEE-project/profile.jsp ";
- 
+
         String resultMessage = "";
- 
+
         try {
-            EmailUtility.sendEmail(host, port, user, pass, recipient, subject,content);
+            EmailUtility.sendEmail(host, port, user, pass, recipient, subject, content);
             resultMessage = "The e-mail was sent successfully";
         } catch (MessagingException ex) {
             resultMessage = "There were an error: " + ex.getMessage();
@@ -155,8 +148,7 @@ public class doneavailable extends HttpServlet {
             getServletContext().getRequestDispatcher("/Result.jsp").forward(
                     request, response);
         }
-          
-       
+
     }
 
     /**

@@ -23,7 +23,7 @@ String driver  = "com.mysql.jdbc.Driver";
 Statement st;
    public  void addData(String fname,String lname, String email,String pass,int number) {
        ConnectDB()  ;
-        String query=" INSERT INTO user(fname,lname,email,password,number) VALUES ('"+fname+"','"+lname+"','"+email+"','"+pass+"',"+number+")" ; 
+        String query=" INSERT INTO user(fname,lname,email,password,number) VALUES ('"+fname+"','"+lname+"','"+email+"','"+passwordEncryption.MD5(pass)+"',"+number+")" ; 
         
         
             try {

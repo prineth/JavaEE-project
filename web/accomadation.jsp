@@ -1,6 +1,9 @@
 <%@page import="sun.security.pkcs11.wrapper.Functions"%>
 <%@include file="navBar.jsp" %>
 <!-- Card -->
+
+
+
 </br></br>
 <b><h3 class="text-center mt-4">ROOMS<br></h3></b></b></b>
 </br>
