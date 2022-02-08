@@ -1,5 +1,14 @@
 <%@include file="navBar.jsp" %>
-
+   <%
+           response.setHeader("Cache-control","no-cache, no-store, must-revalidate");
+           response.setHeader("pragma", "no-cache");
+           response.setHeader("Expires", "0");
+            
+           if(session.getAttribute("userid")== null){
+               response.sendRedirect("login.jsp");
+           }
+            
+            %>
 <head>
     <link rel="stylesheet" href="avaiable.css" >
     <style>
@@ -151,12 +160,8 @@
             color = "#e63946";
             btn="none";
         }
-      
-        
-          
-           
        
-                    %>
+%>
       
                     <form action="./doneavailable" method="post"  >
                     <div class="container" style="display:<%=css%>;margin-top:20px; " >

@@ -5,12 +5,16 @@
  */
 package model;
 
+
+import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 
 /**
  *
@@ -21,17 +25,29 @@ public class deleteresv {
     String url = "jdbc:mysql://localhost:3306/hotel";
     String driver = "com.mysql.jdbc.Driver";
     Statement st;
-
-    public void deleteresbyid(int number) {
-
+    String news;
+    public String deleteresbyid(int number,int userid) {
+         String count= "";
         ConnectDB();
-        String query = "delete from room_reservation where res_id=" + number + "";
-
+        String query = "call delete_reserve("+number+","+userid+")";
+        
         try {
-            st.executeUpdate(query);
+         
+            
+            
+             ResultSet rs = st.executeQuery(query);
+                
+                rs.next();
+                count = rs.getString(1);
+                System.out.println("Number of records in the cricketers_data table: "+count); 
         } catch (SQLException ex) {
             Logger.getLogger(addSignData.class.getName()).log(Level.SEVERE, null, ex);
+            //out.println("Unable to connect to database.");
+            
         }
+        
+        
+       return count;
 
     }
 

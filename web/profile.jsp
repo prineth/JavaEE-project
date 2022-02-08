@@ -13,6 +13,21 @@
 
         <%@include file="navBar.jsp" %>
 
+        <%
+           //response.setHeader("Cache-control","no-cache, no-store, must-revalidate");
+          // response.setHeader("pragma", "no-cache");
+           //response.setHeader("Expires", "0");
+           
+           
+           response.setHeader("Cache-Control","no-store");
+            response.setHeader("Pragma","no-cache"); 
+            response.setHeader ("Expires", "0"); //prevents caching at the proxy server
+
+           if(session.getAttribute("userid")== null){
+               response.sendRedirect("login.jsp");
+           }
+            
+            %>
 
         <%    try {
                 //int userid = 5 ;
@@ -73,7 +88,15 @@
                 </div>
 
 
-
+                            <%
+                                 String rd = (String) request.getAttribute("messageTwo");
+                                    if (rd == null) {
+                                        rd = "";
+                                    }
+                    
+                                
+                                
+                                %>
 
                 <div class="col-lg-4">
 
@@ -91,6 +114,7 @@
 
                                 <br>
                                 <button type="submit" class="btn btn-danger">Delete</button>
+                                <p><%=rd%></p>
                             </form>
                         </div>
                     </div>

@@ -15,24 +15,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.loginData;
+import model.passwordEncryption;
 import model.unameCheck;
 
 
-/**
- *
- * @author Kaneeka
- */
 public class login extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -50,29 +38,12 @@ public class login extends HttpServlet {
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -82,16 +53,16 @@ public class login extends HttpServlet {
         PrintWriter out = response.getWriter();
 	
         String email = request.getParameter("name");
-        String pass = request.getParameter("pass");
+        String passk = request.getParameter("pass");
+        String pass = passwordEncryption.MD5(passk);
 
           unameCheck b=new unameCheck();
           boolean check=b.viewdata(email);
         
           loginData c = new loginData();
           List blist= c.getDatas(email,pass);
-          
 
-                 if(check==false){
+             if(check==false){
                String msg="username or password incorrect";
                out.println(msg);
                request.setAttribute("messageTwo",msg);
@@ -115,11 +86,7 @@ public class login extends HttpServlet {
                          session.setAttribute("fname",fname);
                          session.setAttribute("lname",lname);
                          session.setAttribute("number",number);
-                         
-                         
-                         
-                         
-                         
+
                       RequestDispatcher rd = request.getRequestDispatcher("./accomadation.jsp");
                       rd.forward(request, response);
                  }else{
@@ -131,17 +98,9 @@ public class login extends HttpServlet {
                     }
              }
         
-             
-             
-        
-        //processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+
     @Override
     public String getServletInfo() {
         return "Short description";

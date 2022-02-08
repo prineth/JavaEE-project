@@ -3,28 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/javaee/JavaEE-project/src/java/controller/roomBook.java</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/model/loginData.java</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/model/dbCon.java</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/model/doneal.java</file>
-            <file>file:/F:/javaee/JavaEE-project/web/about_us.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/controller/getReserve.java</file>
-            <file>file:/F:/javaee/JavaEE-project/web/roomsAvaialable.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/model/checkAvail.java</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/controller/feedback.java</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/model/getresData.java</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/controller/hallBook.java</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/controller/login.java</file>
-            <file>file:/F:/javaee/JavaEE-project/web/accomadation.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/web/navBar.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/web/billingDetail.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/web/profile.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/controller/checkAvailability.java</file>
-            <file>file:/F:/javaee/JavaEE-project/web/Falsestatus.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/web/Truestatus.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/web/login.jsp</file>
-            <file>file:/F:/javaee/JavaEE-project/src/java/controller/doneavailable.java</file>
-            <file>file:/F:/javaee/JavaEE-project/web/available.css</file>
+            <file>file:/F:/javaee/new%20project/JavaEE-project/web/payment.jsp</file>
         </group>
     </open-files>
 </project-private>

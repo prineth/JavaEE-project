@@ -24,7 +24,7 @@ String driver  = "com.mysql.jdbc.Driver";
 Statement st;
 
 
-    public void availdone(int roomcount,String roomType,int userid,int nights,int noOfGuest,String ArrivalDate,String DepatureDate) {
+    public synchronized void availdone(int roomcount,String roomType,int userid,int nights,int noOfGuest,String ArrivalDate,String DepatureDate) {
         
         ConnectDB();
         
@@ -63,5 +63,7 @@ Statement st;
          }
     
      }
+
+   
     
 }
