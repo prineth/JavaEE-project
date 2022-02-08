@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-4 offset-md-4">
             <div class="login-form bg-light mt-4 p-4">
-                <form method="post" action="./login" class="row g-3">
+                <form method="post" action="./contactUs" class="row g-3">
                     <% String rd = (String) request.getAttribute("messageTwo");
                         if (rd == null) {
                             rd = "";

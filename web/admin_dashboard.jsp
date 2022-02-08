@@ -64,7 +64,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Messages</a></li>
+                  <li><a class="dropdown-item" href="admin_messages.jsp">Messages</a></li>
                   <li><a class="dropdown-item" href="admin_login.jsp">Sign out</a></li>
                 </ul>
               </div>

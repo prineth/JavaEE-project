@@ -45,7 +45,7 @@
                    alt="logo"
                 />
                <p>
-                   bla bla bla bla bla bla
+                   Arrive as guests<br>leave as friends
                </p>
             </div>
             <!-- Grid column -->
